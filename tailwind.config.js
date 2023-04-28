@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily:{
-      raleway:"'Raleway', sans-serif;",
+      noto:"'Noto Serif', serif;",
       roboto:"'Roboto', sans-serif;"
     }
   },
