@@ -6,16 +6,19 @@ let topOffset = window.pageYOffset
 let width = screen.width
 
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
+if (window.location.pathname=='/public/index.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
+    setInterval(() => {
+        autoSlideShow();
+      }, "3000");
+}
 
-setInterval(() => {
-    autoSlideShow();
-  }, "3000");
-  
 let contor = 1;
 function autoSlideShow(){
     let Slider = document.querySelector("#slideShow");
-    Slider.style.transform = "translateX("+ (contor - 1) * -40 +"vw)";
-    console.log(contor)
+    if(width > 767){
+        Slider.style.transform = "translateX("+ (contor - 1) * -40 +"vw)";
+    }
+    else Slider.style.transform = "translateX("+ (contor - 1) * -90 +"vw)";
     for( let i = 1 ; i <= 5 ; i++){
         if(i != contor){
             document.querySelector("#i"+i).style.opacity = "0.5";
@@ -30,7 +33,9 @@ function autoSlideShow(){
     }
     if( contor === 5 ){
         setTimeout(function(){
-            Slider.style.transform = "translateX(-200vw)";
+            if(width > 767)
+                Slider.style.transform = "translateX(-200vw)";
+            else Slider.style.transform = "translateX(-450vw)";
         },2500)
         contor = 1;
     }
@@ -68,7 +73,19 @@ function slideShow(value){
 
     },20000)
 }
-document.querySelector("#vid").volume = 0.2;
+
+function scrollNavBar(){
+    let top = window.pageYOffset;
+    if( top === 0 ){
+        document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0)"
+    }
+    else{
+        document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
+    }
+    if(top < 110 && top > 100)
+    console.log(top)
+}
+// document.querySelector("#vid").volume = 0.2;
 
 ///////////////////////////////////ISTORIC/////////////////////////////////////////////////
 
@@ -151,7 +168,7 @@ function dropCatedre(value){
 
 ///////////////////////////////////INFORMATII/////////////////////////////////////////////////
 let boolInformatii = [];
-for (let index = 1; index <= 2; index++) {
+for (let index = 1; index <= 3; index++) {
     boolInformatii[index] = true;
 }
 function dropInformatii(value){
@@ -164,16 +181,6 @@ function dropInformatii(value){
         document.querySelector("#arrow"+value).style.transform = "rotate(0deg)"
     }
     boolInformatii[value] = !boolInformatii[value]; 
-}
-
-function scrollNavBar(){
-    let top = window.pageYOffset;
-    if( top === 0 ){
-        document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0)"
-    }
-    else{
-        document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
-    }
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
