@@ -4,7 +4,8 @@ let btnLeft = document.querySelector("#btn-left");
 let k = 1;
 let topOffset = window.pageYOffset
 let width = screen.width
-
+let contor = 1;
+let isDesktop;
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
 if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
     setInterval(() => {
@@ -12,26 +13,38 @@ if (window.location.pathname=='/index.html' || window.location.pathname=='/' || 
       }, "3000");
 
 }
+// [document.querySelector(".galery").children].forEach(child => child)
+if(width > 1260) isDesktop = true;
+else isDesktop =false
 
-function openImage(value){
-    document.querySelector("#openImage").style.transform = "translateX(0px)"
+function openImagePhone(value){
+    if(isDesktop == false)
+    document.querySelector("#openImage").style.transform = "translateX(0px)";
     let bgImage = document.querySelector("#bgimage"+value).style.backgroundImage.slice(5,-2);
     document.querySelector("#openedImage").src = bgImage;
 }
-function closeImage(){
-    document.querySelector("#openImage").style.transform = "translateX(100vw)"
+function openImage(value){
+    document.querySelector("#openImage").style.transform = "translateX(0px)";
+    let bgImage = document.querySelector("#bgimage"+value).style.backgroundImage.slice(5,-2);
+    document.querySelector("#openedImage").src = bgImage;
+}
+function closeImage(){  
+    document.querySelector("#openImage").style.transform = "translateX(100vw)";
 }
 
 function darken(value){
-    document.querySelector("#container"+value).style.transform = "translateY(0px)";
+    if(isDesktop == true){
+        document.querySelector("#container"+value).style.transform = "translateY(0px)";
+    }
 }
 
 function lightup(value){
+    if(isDesktop == true){
     let containerHeight = document.querySelector("#container"+value).offsetHeight;
     document.querySelector("#container"+value).style.transform = "translateY(" + containerHeight + "px)";
+    }
 }
 
-let contor = 1;
 function autoSlideShow(){
     let Slider = document.querySelector("#slideShow");
     if(width > 767){
@@ -212,23 +225,52 @@ function dropInformatii(value){
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
+// let droped = false;
+// function dropDown(value){
+//     if( value == 0 ){
+//         document.querySelector("#dropDown").style.display = "flex";
+//         setTimeout(() => {
+//             document.querySelector("#dropDown").style.opacity = "1";
+//         }, 100)
+//         droped = true;
+//     }
+//     else if( value == 1 ){
+//         if( droped == true ) document.querySelector("#dropDown").style.opacity = "1";
+//         makeDropedFalse()
+//     }
+// }
+// function dropFade(){
+//     if( droped == false){
+//         document.querySelector("#dropDown").style.opacity = "0";
+//         setTimeout(() => {
+//             document.querySelector("#dropDown").style.display = "none";
+//         }, 500)
+//     }
+// }
 let droped = false;
 function dropDown(value){
     if( value == 0 ){
-        document.querySelector("#dropDown").style.opacity = "1";
-        setTimeout({
-    
-        },1000)
-        droped = true
+        document.querySelector("#dropDown").style.display = "block";
+        setTimeout(() => {
+            document.querySelector("#dropDown").style.opacity = "1";
+        },100)
+        droped = true;
+        console.log(3);
     }
     else if (value == 1){
-        if(droped == true)document.querySelector("#dropDown").style.opacity = "1";
+        if(droped == true){document.querySelector("#dropDown").style.opacity = "1";
+        setTimeout(() => {
+            document.querySelector("#dropDown").style.display = "block";
+        },100)}
         makeDropedFalse();
     }
 
 }
 function dropFade(){
     document.querySelector("#dropDown").style.opacity = "0";
+    setTimeout(() => {
+        document.querySelector("#dropDown").style.display = "none";
+    },100)
 
 }
 function makeDropedFalse(){

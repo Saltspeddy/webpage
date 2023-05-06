@@ -20,10 +20,10 @@
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
             <a onmouseover="dropDown(0)" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href=".">Proiecte</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
@@ -63,8 +63,8 @@
     </div>
 
     <div class="flex font-medium flex-col overflow-y m-auto w-[95vw] gap-5 pt-[100px] pb-[50px]">
-        <div onclick="dropCatedre(1)" class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
-            <div class="flex">
+        <div class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
+            <div  onclick="dropCatedre(1)" class="flex w-full">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
                         <image x="9" y="32" width="110" height="69" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABFCAYAAACrMNMOAAACgElEQVR4nO2d0U3DMBCGz6XAA/DIAEgdgQHaIWADRoAhYIRuAEswSCsGgLciJKDEyBFBJk2a2IZyv/t/T5HatJf76ottKVcjiVyNRjb1M1K5ns2CrgMx5jqDlJM1JEAC41AS8zI1jijrZyJ7J6PRa8oX/wVdv2ItPzSfh9ls/07kLfS8qBGnUZp0iNEoTRJyGTzi6glIrdWpNAmpx9TnPf8dd2g8Sfc4DTRdsJ8UjdJ+A3hxEigiB2mSizjpKSQXaZKTuG2D4kAZ+mG3TZlzKjEItHk4n06PTyeTJ/FHnHvzYGdn23OmmtuLi8cqvlKck2aMkeLjY9tzo4Feuz/D6sDa1dHplUgnuMgyTfowVd7bSmZZHdvCrt3XKG1zfOd63dyiURwnI3poc7EijtL00eSE6zhQKA4UigOF4kChOFAoDhSKA4XiQKE4UCgOFIoDheJAoThQKA4UigOF4kChOFAoDhSKA4XiQKE4UCgOFIoDheJAoThQKA4UigOF4kChOFAoDhSKAyUbcX2arGltxBZDFuIA+1UmM0z9AI2J8J/gdMf1GHOQFzzitD9q3BQfYsxdRJVKrYlYF1f5mrUvm42om9hcBosbf5VXbfJ6dc+bzw82E00/qpjHEbes4BPuRZbVMWKHBo0x+zntC9dxoFAcKBQHyoq4nHYXcqHJSeOIozw9tLlY2VUgGJRT40vXaJTCYHBLmrJU3rBjHgzVOrTzr0yIHvzNgx87J8Vicajd0+Do6NnG/g3XGhCu3QeyRLrK4HpIuwbgvwHi1h3kAtwluuzaXhTRpb06F7UjLvSkxI28wtp3I7IbMvqstUtjzBC5jTH8bDJ2QgXde1pEPgHTpeqnCGcu8gAAAABJRU5ErkJggg=="/>
@@ -426,7 +426,7 @@
         <div class="flex md:flex-row flex-col pt-4 md:justify-between items-center mx-10">
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3">Contact</p>
+                    <p class="font-noto text-xl font-semibold mb-3">Contact</p>
                     <p>0256491714</p>
                     <p>0256491713</p>
                     <p>cnb@colegiulbanatean.ro</p>
@@ -437,7 +437,7 @@
             </div>
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
+                    <p class="font-noto text-xl font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
                     <a href="https://www.edu.ro">Ministerul Educației Naționale și al Cercetării Științifice</a>
                     <a href="https://www.isj.tm.edu.ro">Inspectoratul Școlar Județean Timiș</a>
                     <a href="https://www.cjraetm.ro">Centrul Județean de Resurse și Asistență Educațională Timiș</a>
