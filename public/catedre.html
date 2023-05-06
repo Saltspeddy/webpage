@@ -9,32 +9,33 @@
 
 <body class="bg-[#F4F4F9] font-roboto" style="overflow-x:hidden;">
     <nav class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed">
-        <img class="h-14 md:ml-16 ml-10 fixed" src="./assets/CNB_sgV2-removebg-preview.png" alt="CNB logo">
+        <img class="h-14 md:ml-16 ml-10 fixed" src="./assets/CNB_sgV2-removebg-preview.png" alt="CNB logo">  
         <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
             <p>Colegiul</p>
             <p>Național</p>
             <p>Bănățean</p>
-        </div>               
-        <div class="h-16 w-[100vw] hidden lg:flex flex-row self-center items-center justify-center text-lg gap-20 fixed">
+        </div>             
+        <div class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed">
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
-            <a onmouseover="dropDown()" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+            <a onmouseover="dropDown(0)" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href=".">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown()" onmouseleave="dropFade()" id="dropDown" class="rounded-b-md opacity-0 hidden absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw+75px)] top-16 duration-500">
+            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
                     <a href="">Consiliul elevilor</a>
-                    <a href="">Concursuri și Olimpiade</a>
+                    <a href="">Concursuri și olimpiade</a>
                     <a href="">Burse școlare</a>
                     <a href="">Examene</a> 
                     <a href="">Administrativ</a>
                     <a href="">Biblioteca școlii</a>
                 </div>
             </div>
-        <div onclick="secondaryMenu()" class="z-50 flex lg:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
+        <div onclick="secondaryMenu()" class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
@@ -43,20 +44,24 @@
     <div id="secondaryMenu" class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300">
         <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
             <a href="./index.html">Acasă</a>
+            <a href="./istoric.html">Istoric</a>
             <a href="./catedre.html">Catedre</a>
             <a href="./informatii.html">Informații</a>
             <div class="ml-4 text-lg flex flex-col">
                 <a href="">Anunțuri</a>
+                <a href="">Ofertă educațională</a>
                 <a href="">Consiliul elevilor</a>
-                <a href="">Concursuri și Olimpiade</a>
+                <a href="">Concursuri și olimpiade</a>
                 <a href="">Burse școlare</a>
                 <a href="">Examene</a> 
-                <a href="">Ofertă educațională</a>
+                <a href="">Administrativ</a>
+                <a href="">Biblioteca școlii</a>
             </div>
+            <a href="./">Proiecte</a>
             <a href="./contact.html">Contact</a>
-            <a href="./istoric.html">Istoric</a>
         </div>
     </div>
+
     <div class="flex font-medium flex-col overflow-y m-auto w-[95vw] gap-5 pt-[100px] pb-[50px]">
         <div onclick="dropCatedre(1)" class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
             <div class="flex">
@@ -448,7 +453,8 @@
                 <div>Mâțu Dragoș-Gabriel, </div>
                 <div>Uibar Robert-Constantin, </div>
                 <div>Florea Irina-Ioana, </div>
-                <div>David Daria-Cristina </div>
+                <div>David Daria-Cristina, </div>
+                <div>Mihoc Alexandru</div>
             </div>
         </div>
     </footer>

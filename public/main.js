@@ -6,10 +6,29 @@ let topOffset = window.pageYOffset
 let width = screen.width
 
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
-if (window.location.pathname=='/public/index.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
+if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
     setInterval(() => {
         autoSlideShow();
       }, "3000");
+
+}
+
+function openImage(value){
+    document.querySelector("#openImage").style.transform = "translateX(0px)"
+    let bgImage = document.querySelector("#bgimage"+value).style.backgroundImage.slice(5,-2);
+    document.querySelector("#openedImage").src = bgImage;
+}
+function closeImage(){
+    document.querySelector("#openImage").style.transform = "translateX(100vw)"
+}
+
+function darken(value){
+    document.querySelector("#container"+value).style.transform = "translateY(0px)";
+}
+
+function lightup(value){
+    let containerHeight = document.querySelector("#container"+value).offsetHeight;
+    document.querySelector("#container"+value).style.transform = "translateY(" + containerHeight + "px)";
 }
 
 let contor = 1;
@@ -82,25 +101,22 @@ function scrollNavBar(){
     else{
         document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
     }
-    if(top < 110 && top > 100)
-    console.log(top)
 }
 // document.querySelector("#vid").volume = 0.2;
 
 ///////////////////////////////////ISTORIC/////////////////////////////////////////////////
 
 var images = ["url('./assets/scan0003.jpg')",
-"url('./assets/scan0015.jpg')",
+"url('./assets/scan0003.jpg')",
 "url('./assets/scan0004.jpg')",
-"url('./assets/scan0011.jpg')",
-"url('./assets/scan0016.jpg')",
-"url('./assets/scan0018.jpg')",
-"url('./assets/scan0032.jpg')"];
+"url('./assets/scan0006.jpg')",
+"url('./assets/scan0003.jpg')",
+"url('./assets/scan0004.jpg')",
+"url('./assets/scan0006.jpg')"];
 var index = 0;
-var div = document.createElement('div')
+var div = document.createElement('div');
 
 function makeImage() {
-   
     if(screen.width>700)
         {div.style.width="80vw";
         div.style.height="80vh";
@@ -114,6 +130,18 @@ function makeImage() {
    div.style.backgroundPosition="center center";
    div.style.backgroundRepeat="no-repeat";
    document.getElementById('content').appendChild(div);
+}
+if (window.location.pathname=='/istoric.html' || window.location.pathname=='/public/istoric.html') {
+setInterval(() => {
+    slideShowIstoric();
+  }, "3000");
+}
+function slideShowIstoric(){
+    index++;
+    if(index == 7)
+        index = 0;
+    index = index % images.length;
+    div.style.backgroundImage=images[index];
 }
 
 function moveRight(){
@@ -184,18 +212,32 @@ function dropInformatii(value){
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
-function dropDown(){
-    document.querySelector("#dropDown").style.display = "block";
-    document.querySelector("#dropDown").style.opacity = "1";
+let droped = false;
+function dropDown(value){
+    if( value == 0 ){
+        document.querySelector("#dropDown").style.opacity = "1";
+        setTimeout({
+    
+        },1000)
+        droped = true
+    }
+    else if (value == 1){
+        if(droped == true)document.querySelector("#dropDown").style.opacity = "1";
+        makeDropedFalse();
+    }
+
 }
 function dropFade(){
-    document.querySelector("#dropDown").style.display = "none";
     document.querySelector("#dropDown").style.opacity = "0";
+
+}
+function makeDropedFalse(){
+    droped = false;
 }
 
-let opened = true;
+let opened = false;
 function secondaryMenu(){
-    if(opened === true){
+    if(opened === false){
         document.querySelector("#secondaryMenu").style.transform = "translateX(0px)";
         opened = !opened;
     }

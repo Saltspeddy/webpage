@@ -6,7 +6,7 @@ module.exports = {
     fontFamily:{
       noto:"'Noto Serif', serif;",
       roboto:"'Roboto', sans-serif;"
-    }
+    },
   },
   plugins: [],
 }

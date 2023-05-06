@@ -5,81 +5,148 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Contact</title>
+  <title>Ofertă educațională</title>
 </head>
 
-<body>
+<body class="bg-[#F4F4F9] font-roboto" style="overflow-x:hidden;">
     <nav class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed">
-        <img class="h-14 md:ml-16 ml-10 fixed" src="./assets/CNB_sgV2-removebg-preview.png" alt="CNB logo">               
-        <div class="h-16 w-[100vw] hidden lg:flex flex-row self-center items-center justify-center text-lg gap-20 fixed">
-                <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
-                <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
-                <a onmouseover="dropDown()" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
-                <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
-                <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
-            </div>
-            <div onmouseover="dropDown()" onmouseleave="dropFade()" id="dropDown" class="rounded-b-md opacity-0 hidden absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-100px)] top-16 duration-500">
+        <img class="h-14 md:ml-16 ml-10 fixed" src="./assets/CNB_sgV2-removebg-preview.png" alt="CNB logo">  
+        <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
+            <p>Colegiul</p>
+            <p>Național</p>
+            <p>Bănățean</p>
+        </div>             
+        <div class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed">
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
+            <a onmouseover="dropDown()" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href=".">Proiecte</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
+        </div>
+            <div onmouseover="dropDown()" onmouseleave="dropFade()" id="dropDown" class="rounded-b-md opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
-                    <a href="">Concursuri și olimpiade</a>
-                    <a href="">Examene</a>
-                    <a href="">Consiliul elevilor</a>
-                    <a href="">Burse școlare</a>
                     <a href="">Ofertă educațională</a>
+                    <a href="">Consiliul elevilor</a>
+                    <a href="">Concursuri și Olimpiade</a>
+                    <a href="">Burse școlare</a>
+                    <a href="">Examene</a> 
+                    <a href="">Administrativ</a>
+                    <a href="">Biblioteca școlii</a>
                 </div>
             </div>
-            <div onclick="secondaryMenu()" class="z-50 flex lg:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
-                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </div>
+        <div onclick="secondaryMenu()" class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
     </nav>
-    <div class="w-[100wv] h-auto">
-        <div class="w-[100vw]">
-            <h1 class="font-noto text-xl font-bold">Învățământ primar</h1>
-            <h2 class="font-noto text-lg font-semibold">Clasele pregătitoare</h2>
+    <div id="secondaryMenu" class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300">
+        <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
+            <a href="./index.html">Acasă</a>
+            <a href="./istoric.html">Istoric</a>
+            <a href="./catedre.html">Catedre</a>
+            <a href="./informatii.html">Informații</a>
+            <div class="ml-4 text-lg flex flex-col">
+                <a href="">Anunțuri</a>
+                <a href="">Ofertă educațională</a>
+                <a href="">Consiliul elevilor</a>
+                <a href="">Concursuri și Olimpiade</a>
+                <a href="">Burse școlare</a>
+                <a href="">Examene</a> 
+                <a href="">Administrativ</a>
+                <a href="">Biblioteca școlii</a>
+            </div>
+            <a href="./">Proiecte</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="grid font-roboto md:grid-cols-3 grid-cols-1 pt-20 m-auto w-[96vw] h-auto items-center">
+        <div class="border-2 border-zinc-400 p-2">
+            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ primar</h1>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele pregătitoare</h2>
             <div class="flex flex-col">
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Pregătitoare A</p>
-                    <p>Ghimbășanu Sonia</p>
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>A</p>
+                    <p>învățătoare Ghimbășanu Sonia</p>
                     <p>24 elevi</p>
                 </div>
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Pregătitoare B</p>
-                    <p>Suciu Adela</p>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>B</p>
+                    <p>învățătoare Suciu Adela</p>
                     <p>24 elevi</p>
+                </div>
+            </div>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele I</h2>
+            <div class="flex flex-col">
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>I A</p>
+                    <p>învățătoare Josu Luminița</p>
+                    <p>24 elevi</p>
+                </div>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>I B</p>
+                    <p>învățătoare Florea Lucia</p>
+                    <p>25 elevi</p>
                 </div>
             </div>
         </div>
-        <div class="w-[100wv]">
-            <h1 class="font-noto text-xl font-bold">Învățământ gimanzial</h1>
-            <h2 class="font-noto text-lg font-semibold">Clasele a V-a</h2>
+        <div class="border-2 border-zinc-400 p-2">
+            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ gimanzial</h1>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a V-a</h2>
             <div class="flex flex-col">
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Clasa a V-a A</p>
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>V A</p>
                     <p>diriginte Pall Daniela</p>
                     <p>28 elevi</p>
                 </div>
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Clasa a V-a B</p>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>V B</p>
                     <p>diriginte Ghertenișan Adela</p>
                     <p>29 elevi</p>
                 </div>
             </div>
-        </div>
-        <div class="w-[100wv]">
-            <h1 class="font-noto text-xl font-bold">Învățământ liceal</h1>
-            <h2 class="font-noto text-lg font-semibold">Clasele a IX-a</h2>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a VI-a</h2>
             <div class="flex flex-col">
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Clasa a IX-a MI1</p>
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>VI A</p>
+                    <p>diriginte Clanița Iadran</p>
+                    <p>28 elevi</p>
+                </div>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>VI B</p>
+                    <p>diriginte Ghelbere Dana</p>
+                    <p>28 elevi</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-2 border-zinc-400 p-2">
+            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ liceal</h1>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a IX-a</h2>
+            <div class="flex flex-col">
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>IX MI1</p>
                     <p>diriginte Barta Tiberiu</p>
                     <p>26 elevi</p>
                 </div>
-                <div class="flex flex-row text-base font-roboto gap-3">
-                    <p>Clasa a IX-a MI2</p>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>IX MI2</p>
                     <p>diriginte Codrea Claudia</p>
                     <p>24 elevi</p>
+                </div>
+            </div>
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a X-a</h2>
+            <div class="flex flex-col">
+                <div class="flex text-base md:text-lg gap-3 pt-2">
+                    <p>X MI 1</p>
+                    <p>diriginte Toma Rodica</p>
+                    <p>27 elevi</p>
+                </div>
+                <div class="flex text-base md:text-lg gap-3">
+                    <p>X MI2</p>
+                    <p>diriginte Grecu Florina</p>
+                    <p>30 elevi</p>
                 </div>
             </div>
         </div>

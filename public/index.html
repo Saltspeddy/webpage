@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow-x: hidden;">
+<html lang="en" style="overflow-x: hidden; scroll-behavior: smooth;">
 <head >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,14 +17,15 @@
                 <p>Bănățean</p>
             </div>
             
-            <div class="h-16 w-[100vw] hidden lg:flex flex-row self-center items-center justify-center text-lg gap-20 fixed">
+            <div class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed">
                 <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
                 <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
                 <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
                 <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+                <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href=".">Proiecte</a>
                 <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
             </div>
-            <div onclick="secondaryMenu()" class="flex lg:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
+            <div onclick="secondaryMenu()" class="flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
                 <svg class="w-8 h-8 z-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -44,6 +45,7 @@
                     <a href="">Examene</a> 
                     <a href="">Ofertă educațională</a>
                 </div>
+                <a href="./contact.html">Proiecte</a>
                 <a href="./contact.html">Contact</a>
             </div>
         </div>
@@ -140,11 +142,102 @@
             </div>
         </div>
     </div>
+
+    <div class="relative pt-12 pb-32 flex justify-center items-center bg-[#f4f8fb]">
+        <div class=" justify-center galery gap-6">
+            <div id="bgimage1" onmouseleave="lightup(1)" onmouseover="darken(1)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0003.jpg); overflow: hidden;">
+                <div id="container1" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage2" onmouseleave="lightup(2)" onmouseover="darken(2)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0006.jpg); overflow: hidden;">
+                <div id="container2" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(2)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage3" onmouseleave="lightup(3)" onmouseover="darken(3)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 col-span-2 row-span-2" style="background-image: url(./assets/scan0004.jpg); overflow: hidden;">
+                <div id="container3" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(3)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage4" onmouseleave="lightup(4)" onmouseover="darken(4)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 row-span-2" style="background-image: url(./assets/scan0005.jpg); overflow: hidden;">
+                <div id="container4" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(4)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage5" onmouseleave="lightup(5)" onmouseover="darken(5)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0003.jpg); overflow: hidden;">
+                <div id="container5" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(5)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage6" onmouseleave="lightup(6)" onmouseover="darken(6)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0004.jpg); overflow: hidden;">
+                <div id="container6" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(6)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>            
+            <div id="bgimage7" onmouseleave="lightup(7)" onmouseover="darken(7)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0006.jpg); overflow: hidden;">
+                <div id="container7" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(7)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+
+            <div id="bgimage8" onmouseleave="lightup(8)" onmouseover="darken(8)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/scan0003.jpg); overflow: hidden;">
+                <div id="container8" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(8)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+
+            
+        </div>
+       <button class="absolute bottom-6 text-[#233657] rounded-3xl px-6 py-4 text-lg border-2 border-[#233657] hover:bg-[#233657] hover:text-white duration-500">Load more</button>
+    </div>
+    <div id="openImage" class="w-[100vw] h-[100vh] top-0 translate-x-[100vw] flex justify-center items-center fixed bg-opacity-70 bg-black duration-500">
+        <div onclick="closeImage()" class="z-30 absolute top-24 left-10 h-12 w-12">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg> 
+        </div>   
+        <div class="relative w-full h-[60vh] flex justify-center items-center">
+            <img id="openedImage" src="" alt="" class="object-contain md:max-w-[80vw] md:max-h-[80vh] max-w-[90vw] max-h-[80vh]">
+        </div>    
+    </div>
     <footer class="bg-[#123] font-roboto text-base text-[#999999] ">
         <div class="flex md:flex-row flex-col pt-4 md:justify-between items-center mx-10">
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3">Contact</p>
+                    <p class="font-noto text-xl font-semibold mb-3">Contact</p>
                     <p>0256491714</p>
                     <p>0256491713</p>
                     <p>cnb@colegiulbanatean.ro</p>
@@ -155,7 +248,7 @@
             </div>
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
+                    <p class="font-noto text-xl font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
                     <a href="https://www.edu.ro">Ministerul Educației Naționale și al Cercetării Științifice</a>
                     <a href="https://www.isj.tm.edu.ro">Inspectoratul Școlar Județean Timiș</a>
                     <a href="https://www.cjraetm.ro">Centrul Județean de Resurse și Asistență Educațională Timiș</a>
@@ -171,7 +264,8 @@
                 <div>Mâțu Dragoș-Gabriel, </div>
                 <div>Uibar Robert-Constantin, </div>
                 <div>Florea Irina-Ioana, </div>
-                <div>David Daria-Cristina </div>
+                <div>David Daria-Cristina, </div>
+                <div>Mihoc Alexandru</div>
             </div>
         </div>
     </footer>
