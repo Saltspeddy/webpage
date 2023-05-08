@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Catedre</title>
+  <link rel="icon" type="image/x-icon" href="/public/assets/CNB_sgV2-removebg-preview.png">
 </head>
 
 <body class="bg-[#F4F4F9] font-roboto" style="overflow-x:hidden;">
@@ -23,7 +24,7 @@
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md opacity-0 hidden absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
@@ -48,7 +49,7 @@
             <a href="./catedre.html">Catedre</a>
             <a href="./informatii.html">Informații</a>
             <div class="ml-4 text-lg flex flex-col">
-                <a href="">Anunțuri</a>
+                <a href="./template.html">Anunțuri</a>
                 <a href="">Ofertă educațională</a>
                 <a href="">Consiliul elevilor</a>
                 <a href="">Concursuri și olimpiade</a>
@@ -57,14 +58,13 @@
                 <a href="">Administrativ</a>
                 <a href="">Biblioteca școlii</a>
             </div>
-            <a href="./">Proiecte</a>
+            <a href="./proiecte.html">Proiecte</a>
             <a href="./contact.html">Contact</a>
         </div>
     </div>
-
     <div class="flex font-medium flex-col overflow-y m-auto w-[95vw] gap-5 pt-[100px] pb-[50px]">
         <div class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
-            <div  onclick="dropCatedre(1)" class="flex w-full">
+            <div onclick="dropCatedre(1)" class="flex w-[100%]">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
                         <image x="9" y="32" width="110" height="69" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABFCAYAAACrMNMOAAACgElEQVR4nO2d0U3DMBCGz6XAA/DIAEgdgQHaIWADRoAhYIRuAEswSCsGgLciJKDEyBFBJk2a2IZyv/t/T5HatJf76ottKVcjiVyNRjb1M1K5ns2CrgMx5jqDlJM1JEAC41AS8zI1jijrZyJ7J6PRa8oX/wVdv2ItPzSfh9ls/07kLfS8qBGnUZp0iNEoTRJyGTzi6glIrdWpNAmpx9TnPf8dd2g8Sfc4DTRdsJ8UjdJ+A3hxEigiB2mSizjpKSQXaZKTuG2D4kAZ+mG3TZlzKjEItHk4n06PTyeTJ/FHnHvzYGdn23OmmtuLi8cqvlKck2aMkeLjY9tzo4Feuz/D6sDa1dHplUgnuMgyTfowVd7bSmZZHdvCrt3XKG1zfOd63dyiURwnI3poc7EijtL00eSE6zhQKA4UigOF4kChOFAoDhSKA4XiQKE4UCgOFIoDheJAoThQKA4UigOF4kChOFAoDhSKA4XiQKE4UCgOFIoDheJAoThQKA4UigOF4kChOFAoDhSKAyUbcX2arGltxBZDFuIA+1UmM0z9AI2J8J/gdMf1GHOQFzzitD9q3BQfYsxdRJVKrYlYF1f5mrUvm42om9hcBosbf5VXbfJ6dc+bzw82E00/qpjHEbes4BPuRZbVMWKHBo0x+zntC9dxoFAcKBQHyoq4nHYXcqHJSeOIozw9tLlY2VUgGJRT40vXaJTCYHBLmrJU3rBjHgzVOrTzr0yIHvzNgx87J8Vicajd0+Do6NnG/g3XGhCu3QeyRLrK4HpIuwbgvwHi1h3kAtwluuzaXhTRpb06F7UjLvSkxI28wtp3I7IbMvqstUtjzBC5jTH8bDJ2QgXde1pEPgHTpeqnCGcu8gAAAABJRU5ErkJggg=="/>
@@ -73,34 +73,34 @@
                 <button id="border1" class="font-roboto text-lg m-5">Limba și literatura română și limba latină</button>
             </div>
             <div id="materie1" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
-                        <div class="text-sm font-semibold md:text-base">Timofte Claudia</div>
-                        <div class="text-sm md:text-base">Bireescu Monica</div>
-                        <div class="text-sm md:text-base">Brihăcescu Denisa</div>
-                        <div class="text-sm md:text-base">Ciupuligă Gianina</div>
-                        <div class="text-sm md:text-base">Dudaș Adelina</div>
-                        <div class="text-sm md:text-base">Eftenie Anca</div>
-                        <div class="text-sm md:text-base">Grecu Florina</div>
-                        <div class="text-sm md:text-base">Ihnatiuc Aurelia</div>
-                        <div class="text-sm md:text-base">Kremer Simona</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:ml-4 md:indent-6 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="font-semibold">profesor gradul Timofte Claudia</p>
+                        <p>profesor gradul 1 Bireescu Monica</p>
+                        <p>profesor gradul Brihăcescu Denisa</p>
+                        <p>profesor gradul Ciupuligă Gianina</p>
+                        <p>profesor gradul Dudaș Adelina</p>
+                        <p>profesor gradul Eftenie Anca</p>
+                        <p>profesor gradul Grecu Florina</p>
+                        <p>profesor gradul Ihnatiuc Aurelia</p>
+                        <p>profesor gradul Kremer Simona</p>
                     </div>
-                    <div class="flex flex-col ml-4">
-                        <div class="text-sm md:text-base">Labici Ramona</div>
-                        <div class="text-sm md:text-base">Merce Gabriela</div>
-                        <div class="text-sm md:text-base">Nagy Mariana</div>
-                        <div class="text-sm md:text-base">Pintea Otilia</div>
-                        <div class="text-sm md:text-base">Pisano Patricia</div>
-                        <div class="text-sm md:text-base">Popescu Crina</div>
-                        <div class="text-sm md:text-base">Popescu Dorina</div>
-                        <div class="text-sm md:text-base">Vaida Elena Cornelia</div>
-                    </div>
+                    <div class="flex flex-col ml-2 md:ml-4 md:indent-6 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p>profesor gradul Labici Ramona</p>
+                        <p>profesor gradul Merce Gabriela</p>
+                        <p>profesor gradul Nagy Mariana</p>
+                        <p>profesor gradul Pintea Otilia</p>
+                        <p>profesor gradul Pisano Patricia</p>
+                        <p>profesor gradul Popescu Crina</p>
+                        <p>profesor gradul Popescu Dorina</p>
+                        <p>profesor gradul Vaida Elena Cornelia</p>
+                    </div>  
                 </div>
             </div>  
         </div>
 
-        <div onclick="dropCatedre(14)" class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
-            <div class="flex">
+        <div class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
+            <div onclick="dropCatedre(14)" class="flex w-[100%]">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
                         <image x="13" y="32" width="103" height="81" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAABRCAYAAADPYrhJAAAB9ElEQVR4nO2cUW7DIBAFSVX1JD5jDtEzWuo5+tUqlbDc1BgMPPzSzHwlcoLQjhdYEnMJCa7T9JW6Btu8z3MynjVsNoaYenoK+tMQYtrpJehXI4jpRw9BSwOI6U+roJ8vl4jpPdn9B9RxuyCmDWX8XlQNPwvK+OzKQUwZqjgl5SDmGIp4ZYc1OA/kGIMcY5BjDHKMQY4xyDEGOcYgxxjkGIMcY5BjDHKMQY4xyDEGOcYgxxjkGIMcY5BjDHKMQY4xyDEGOcYgxxjkGIMcY5BjDHKMQY4xyDEGOcYgxxjkGIMcY5BjzGuqa+vn63l4N43y5JPiEzygjpYbm2HNGA4mEtI6HSyZ8zHPyfkHjtP1SK/IdZo+Qwhv+KhHchhehCGuHukxkhEEHWfIAaxrkJRHVQfaF5fPfFgfdY4xyDGG2mYwW8N0algmc8TcZOQ2kVPzKnKErINeIwg5IraCnVt53l9HzmCigNQ8sxaEHAG9CvehxZvTboOycC0tnPc+d7s+JHPuVywOOPQpd4PI5bjvzZ3Vv5LFgVTOo2yauvaTBcHJ7A1tUjmPslt8Vj9zGSvPHHdBzv3jz4IiSuexvSU1ckT0WGSwIDCGzBHSmj3IEdMiiGHNGDJnADXZM2zjE44Ray8yZxBH6p74GjmDyf2Gs7wJIXwDrGC+SxMIDDMAAAAASUVORK5CYII="/>
@@ -109,53 +109,26 @@
                 <button id="border14" class="text-lg m-5">Informatică și tehnologia informației</button>
             </div>
             <div id="materie14" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
-                <div class="grid md:grid-cols-2 grid-cols-1 w-[100%] pr-8">
-                    <div class="flex flex-col ml-4">
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p class="font-semibold">Branga Monica</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Borugă Gabriel</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Claniță Iadran</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Dragu Felicia</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Mărgineanu Carmen</p>
-                            <p>gradul 2</p>
-                        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="font-semibold">profesor gradul 1 Branga Monica</p>
+                        <p>profesor gradul 1 Borugă Gabriel</p>
+                        <p>profesor gradul 1 Clanița Iadran</p>
+                        <p>profesor gradul 1 Dragu Felicia</p>
+                        <p>profesor gradul 2 Mărgineanu Carmen</p>
                     </div>
-                    <div class="flex flex-col ml-4">
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base sm:w-[80%]">
-                            <p>Toma Rodica</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Tuică Raluca</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Voia Alina</p>
-                            <p>gradul 1</p>
-                        </div>
-                        <div class="flex flex-row justify-between text-sm w-[100%] md:text-base md:w-[80%]">
-                            <p>Zaharia Irina</p>
-                            <p>gradul 2</p>
-                        </div>
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p>profesor gradul 1 Toma Rodica</p>
+                        <p>profesor gradul 1 Tuică Raluca</p>
+                        <p>profesor gradul 1 Voia Alina</p>
+                        <p>profesor gradul 2 Zaharia Irina</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div onclick="dropCatedre(2)" class="items-start min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
-            <div class="items-center px-4 h-16 w-[100%] flex rounded-lg border-2 hover:shadow-xl duration-200">
+        <div class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
+            <div onclick="dropCatedre(2)" class="flex w-[100%]">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
                         <image x="26" y="27" width="76" height="69" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABFCAYAAADgmADjAAABm0lEQVR4nO2bwZHDIAxFyU5KSY0pYmtML7snMh6PY/RAhpHy3y0HK/CMZYHhVgLzfDz+aut/Xy+XvrRihhW27VhlVJolZkhhRx2r9Eqzxgwn7KxjFSqNxPwhgaNgEUBkbUkprBhFUFklYw7b8+nx7I2R6i35ib20kWvfP3qG5wgedVNPx0dH5222qD1X1E5Xtit80veq8K0xU7wlPaW1YqUpKzykWWKkqsNGpFmvTVe49kgj19x7XrceXJGsZxB6PeyI3htvvYGphI0+JRZpaYR5pZSWtBTCvPPvmbTwwmZPjdJ8BGnhNvn2afp8li/vREILiAAPWZWeWGnX9C01Vc9sI6UwIoJK04dcGFNbBWBMbUaZEFMIIYQQ4gDXqvgb6pa0k++rwCOitSSSfZRphEEkDCJhEAmDSBhEwiASBpEwyD1Uazes2gAY7mDD6nMF4Q42rG6vchhEwiASBpEwSLiyYvW5gtDnJVegFVeIchhEwiASBtHk20jNzeGErZpL1v/VIwmRMIiEQSQMgoWdVfLfsHtHk2/yv6WUf57q9VCK153bAAAAAElFTkSuQmCC"/>
@@ -163,30 +136,44 @@
                 </div>
                 <button id="border2" class="font-roboto text-lg m-5">Matematică</button>
             </div>
-            <div id="materie2" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie2" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="font-semibold">profesor gradul Barta Tiberiu</p>
+                        <p>profesor gradul Andraș Adina</p>    
+                        <p>profesor gradul Babal Cristina</p>
+                        <p>profesor gradul Barta Miana</p>
+                        <p>profesor gradul Boldea Petria Elena</p>
+                        <p>profesor gradul Bugar Huanita</p>
+                        <p>profesor gradul Codrea Claudia</p>
+                        <p>profesor gradul Deak Julia</p>
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p>profesor gradul Hodovici Ivana</p>
+                        <p>profesor gradul Lobază Marius</p>
+                        <p>profesor gradul Pall Daniela</p>
+                        <p>profesor gradul Popp Loredana</p>                                    
+                        <p>profesor gradul Slatinaț Bogdan</p>
+                        <p>profesor gradul Tănasie Alexandru</p>
+                        <p>profesor gradul Tomici Corina</p>
                     </div>
                 </div>
             </div>
         </div>
-
         <div onclick="dropCatedre(3)" class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
             <div class="flex">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
-                        <image x="29" y="50" width="70" height="21" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAAqklEQVRYhe2Y0QmAMAxEU3EUZ3QIZ3QXRSGgMWeNX5re+xMr9K6XWFKkwjgMS21NJqZ53j3pWhIdwU1Maynx2I2hEVdYSoASSYs2pmx4HpyMOQq3i7Oaoli9j0opuyniaHzdYzaHMzdtNl9AH/3ApkSfv15uKN1o30wMIJwYdfgvSVGi+2RiAI+M8epzO4FMv3GrkTdfdPNFL1qHPQbAeQyAo00DR5t3iMgK9yZGlI/NG2kAAAAASUVORK5CYII="/>
-                    </svg>
+                        <image x="12" y="45" width="104" height="31" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAAAfCAYAAAALO4jYAAAA2klEQVRoge2aUQqEMAwF47JH8YweYs/oXVz0Qwobi20iPtmZf0H7eEOkGayRaRyX1megjc8877m8ODttCEicquLQ2f1sARGELihOnHf09cqJA/qoGWyI6I1w8jjKAcWJ89MgrxVeurQnH++cuxpEONfgnSuKEyc8xXmUVaVtMWiQOAQkTprijub4f9Xdmf/LM+dBg8QhIHHSFFfWlSku77tpkDgEJE6X4laF1SrMz2kf3uTHdYMIXDc8lPBOAi2KU71RNZZGpEFx4rAXJw672YKwm/0gCEgZM/sCi7BQ8N4j0vQAAAAASUVORK5CYII="/>
+                      </svg>
                 </div>
                 <button id="border3" class="font-roboto text-lg m-5">Fizică</button>
-            </div>       
-            <div id="materie3" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            </div>
+            <div id="materie3" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -201,11 +188,11 @@
                 </div>
                 <button id="border4" class="font-roboto text-lg m-5">Biologie</button>
             </div>
-            <div id="materie4" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie4" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -220,11 +207,11 @@
                 </div>
                 <button id="border5" class="font-roboto text-lg m-5">Chimie</button>
             </div>
-            <div id="materie5" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie5" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">       
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -239,12 +226,11 @@
                 </div>
                 <button id="border6" class="font-roboto text-lg m-5">Geografie</button>
             </div>
-        
-            <div id="materie6" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie6" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -259,11 +245,11 @@
                 </div>
                 <button id="border7" class="font-roboto text-lg m-5">Istorie</button>
             </div>
-            <div id="materie7" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie7" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -278,11 +264,11 @@
                 </div>
                 <button id="border8" class="font-roboto text-lg m-5">Educație fizică</button>
             </div>
-            <div id="materie8" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie8" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -297,11 +283,11 @@
                 </div>
                 <button id="border9" class="font-roboto text-lg m-5">Limba engleză</button>
             </div>
-            <div id="materie9" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie9" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -316,11 +302,11 @@
                 </div>
                 <button id="border10" class="font-roboto text-lg m-5">Limba germană</button>
             </div>
-            <div id="materie10" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie10" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -335,11 +321,11 @@
                 </div>
                 <button id="border11" class="font-roboto text-lg m-5">Limba franceză</button>
             </div>
-            <div id="materie11" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie11" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[50vw] md:justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -354,11 +340,11 @@
                 </div>
                 <button id="border12" class="font-roboto text-lg m-5">Discipline socio-umane</button>
             </div>
-            <div id="materie12" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie12" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -368,16 +354,16 @@
             <div class="flex">
                 <div>
                     <svg class="h-[64px] w-[64px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
-                        <image x="34" y="18" width="60" height="84" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAABUCAYAAADeW1RFAAAAnUlEQVR4nO3ZwQ2EIBRAQbQWa7SIrdFedmvwQFwfMwXweQkHAtuY7DyO750Jn+uauqd95uL/SHCd4DrBdYLrBNcJrhNcJ7hOcN1ywdvdR7a3c6TrBNcJrhNcJ7huvbv07AE+xB8muE5wneA6wXWC6wTXCa4TXCe4TnCd4DrBdYLrBNcJrhNcJ7hOcJ3gOsF1gusE1wmuE1y3VvAY4wd9dgpj6uGlpgAAAABJRU5ErkJggg=="/>
-                    </svg>
+                        <image x="33" y="24" width="63" height="80" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAABQCAYAAACu/a1QAAABF0lEQVR4nO2cWwqDMBAAY/EonrGH6Bm9S0uFSLSagC223Zn58gHCbJIlCWu6VHAdhnsKzG0cF77zTXTxTBmA6YIinskB6GjimWcANuXXY+NfaTXsJYLkHq1GDC2fGgEIL58qAUDI76E8FeWp9Gd77008vjGxsttTUZ6K8lSUp6I8Fef2R/nkzu+Rb727HrDbU1Geitn+KEeyrTs5P4LyVJSnojwV5akoT0V5KspTUZ6K8lSUp6I8FeWpKE/l9KrrX/ptzW5PRXkqylNRPjp7dUDh5WtlraHlW/W82GMjEjXh5fUFTr5cWKHk1yvKvvYyOouWpyS/7PnS7aMHoPTbHPNRA1B6TSckrR8SmM/GqkUnInNSTyk9AO1/VB0hFZSrAAAAAElFTkSuQmCC"/>
+                      </svg>
                 </div>
                 <button id="border13" class="font-roboto text-lg m-5">Religie</button>
             </div>
-            <div id="materie13" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie13" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
             </div>
@@ -391,15 +377,15 @@
                     </svg>
                 </div>
                 <button id="border15" class="font-roboto text-lg m-5">Educație plastică, muzicală și tehnologică</button>
-        </div>
-            <div id="materie15" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            </div>
+            <div id="materie15" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 md:grid-cols-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:indent-6 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <div onclick="dropCatedre(16)" class="items-start px-4 min-h-16 w-[100%] flex flex-col rounded-lg border-2 border-zinc-400 hover:shadow-xl duration-200">
@@ -411,22 +397,67 @@
                 </div>
                 <button id="border16" class="font-roboto text-lg m-5">Învățământ primar</button>
             </div>
-            <div id="materie16" class="flex bg-[#F4F4F9] pl-8 gap-1 -z-10">
-                <div class="grid grid-cols-2 w-[100%] place-content-between">
-                    <div class="flex flex-col ml-4">
+            <div id="materie16" class="hidden bg-[#F4F4F9] pl-8 gap-1 -z-10 p-3 w-[100%]">
+                <div class="grid grid-cols-1 grid-rows-5 md:grid-cols-3 md:grid-rows-2 w-[100%] justify-between">
+                    <div class="flex flex-col ml-2 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="border-b-2 my-1 text-lg text-[#123] font-semibold font-noto">Clasele pregătitoare</p>
+                        <p>preg. A Ghimbășanu Sonia</p>
+                        <p>preg. B Suciu Adela</p>
+                        <p>preg. C Grindeanu Oana</p>
+                        <p>preg. D (germană) Minda Helga</p>
+                        <p>preg. E Momir Slavița</p>
+                        <p>preg. F Țuțuian-Epure Florentina</p>
+                        <p class="pb-1">preg. G Feiler Karina</p>
                     </div>
-                    <div class="flex flex-col ml-4">
+                    <div class="flex flex-col ml-2 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="border-b-2 my-1 text-lg text-[#123] font-semibold font-noto">Clasele I</p>
+                        <p>I A Josu Luminița</p>
+                        <p>I B Florea Lucia</p>
+                        <p>I C Boroș Bianca</p>
+                        <p>I D (germană) Dăescu Iasmina</p>
+                        <p>I E Iuga Paula</p>
+                        <p>I F Gherghina Bianca</p>
+                        <p class="pb-1">I G Uftineanț Diana</p> 
+                    </div>
+                    <div class="flex flex-col ml-2 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="border-b-2 my-1 text-lg text-[#123] font-semibold font-noto">Clasele a II-a</p>
+                        <p>II A Kysilka Ileana</p>
+                        <p>II B Veleșcu Marilena</p>
+                        <p>II C Moțoc Dorica</p>
+                        <p>II D David Monica</p>
+                        <p>II E Berejnic Amelia</p>
+                        <p>II F Preotesoiu Karina</p>
+                        <p class="pb-1">II G Lepa Mihaela</p>
+                    </div>
+                    <div class="flex flex-col ml-2 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="border-b-2 my-1 text-lg text-[#123] font-semibold font-noto">Clasele a III-a</p>
+                        <p>III A Voia Mirela</p>
+                        <p>III B Oprean Adriana</p>
+                        <p>III C Tămaș Ramona</p>
+                        <p>III D Toth Monica</p>
+                        <p>III E Lobonț Dorina</p>
+                        <p class="pb-1">III F Sfercoci Rebeca</p>
+                    </div>
+                    <div class="flex flex-col ml-2 md:ml-4 text-sm w-[100%] md:w-[80%] md:text-base">
+                        <p class="border-b-2 my-1 text-lg text-[#123] font-semibold font-noto">Clasele a IV-a</p>
+                        <p>IV A Lipovan Claudia</p>
+                        <p>IV B Florescu Delia</p>
+                        <p>IV C Lăzureanu Simona</p>
+                        <p>IV D1 (germană) Jung Nicola Diana</p>
+                        <p>IV D2 (germană) Gherasim Mihaela</p>
+                        <p>IV E Olaru Carmen</p>
+                        <p class="pb-1">IV F Visu Dana</p>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+
     <footer class="bg-[#123] font-roboto text-base text-[#999999] ">
         <div class="flex md:flex-row flex-col pt-4 md:justify-between items-center mx-10">
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-xl font-semibold mb-3">Contact</p>
+                    <p class="font-noto text-lg font-semibold mb-3">Contact</p>
                     <p>0256491714</p>
                     <p>0256491713</p>
                     <p>cnb@colegiulbanatean.ro</p>
@@ -437,7 +468,7 @@
             </div>
             <div class="md:w-[50vw] flex flex-col items-center">
                 <div class="flex flex-col">
-                    <p class="font-noto text-xl font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
+                    <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
                     <a href="https://www.edu.ro">Ministerul Educației Naționale și al Cercetării Științifice</a>
                     <a href="https://www.isj.tm.edu.ro">Inspectoratul Școlar Județean Timiș</a>
                     <a href="https://www.cjraetm.ro">Centrul Județean de Resurse și Asistență Educațională Timiș</a>
@@ -453,8 +484,7 @@
                 <div>Mâțu Dragoș-Gabriel, </div>
                 <div>Uibar Robert-Constantin, </div>
                 <div>Florea Irina-Ioana, </div>
-                <div>David Daria-Cristina, </div>
-                <div>Mihoc Alexandru</div>
+                <div>David Daria-Cristina </div>
             </div>
         </div>
     </footer>

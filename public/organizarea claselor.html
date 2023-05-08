@@ -20,16 +20,16 @@
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
-            <a onmouseover="dropDown()" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href=".">Proiecte</a>
+            <a onmouseover="dropDown(0)" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown()" onmouseleave="dropFade()" id="dropDown" class="rounded-b-md opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
                     <a href="">Consiliul elevilor</a>
-                    <a href="">Concursuri și Olimpiade</a>
+                    <a href="">Concursuri și olimpiade</a>
                     <a href="">Burse școlare</a>
                     <a href="">Examene</a> 
                     <a href="">Administrativ</a>
@@ -49,106 +49,120 @@
             <a href="./catedre.html">Catedre</a>
             <a href="./informatii.html">Informații</a>
             <div class="ml-4 text-lg flex flex-col">
-                <a href="">Anunțuri</a>
+                <a href="./template.html">Anunțuri</a>
                 <a href="">Ofertă educațională</a>
                 <a href="">Consiliul elevilor</a>
-                <a href="">Concursuri și Olimpiade</a>
+                <a href="">Concursuri și olimpiade</a>
                 <a href="">Burse școlare</a>
                 <a href="">Examene</a> 
                 <a href="">Administrativ</a>
                 <a href="">Biblioteca școlii</a>
             </div>
-            <a href="./">Proiecte</a>
+            <a href="./proiecte.html">Proiecte</a>
             <a href="./contact.html">Contact</a>
         </div>
     </div>
-    <div class="grid font-roboto md:grid-cols-3 grid-cols-1 pt-20 m-auto w-[96vw] h-auto items-center">
-        <div class="border-2 border-zinc-400 p-2">
-            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ primar</h1>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele pregătitoare</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>A</p>
-                    <p>învățătoare Ghimbășanu Sonia</p>
-                    <p>24 elevi</p>
-                </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>B</p>
-                    <p>învățătoare Suciu Adela</p>
-                    <p>24 elevi</p>
-                </div>
-            </div>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele I</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>I A</p>
-                    <p>învățătoare Josu Luminița</p>
-                    <p>24 elevi</p>
-                </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>I B</p>
-                    <p>învățătoare Florea Lucia</p>
-                    <p>25 elevi</p>
+    <div class="grid font-roboto md:grid-cols-3 grid-cols-1 gap-6 pt-20 m-auto w-[96vw] h-auto">
+        <div class="p-2 flex flex-col gap-6">
+            <h1 class="font-noto text-3xl font-bold text-[#123] flex justify-center items-center mb-5">Învățământ primar</h1>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+                <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele pregătitoare</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>A</p>
+                        <p>învățătoare Ghimbășanu Sonia</p>
+                        <p>24 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>B</p>
+                        <p>învățătoare Suciu Adela</p>
+                        <p>24 elevi</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="border-2 border-zinc-400 p-2">
-            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ gimanzial</h1>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a V-a</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>V A</p>
-                    <p>diriginte Pall Daniela</p>
-                    <p>28 elevi</p>
-                </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>V B</p>
-                    <p>diriginte Ghertenișan Adela</p>
-                    <p>29 elevi</p>
-                </div>
-            </div>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a VI-a</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>VI A</p>
-                    <p>diriginte Clanița Iadran</p>
-                    <p>28 elevi</p>
-                </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>VI B</p>
-                    <p>diriginte Ghelbere Dana</p>
-                    <p>28 elevi</p>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+                <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele I</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>I A</p>
+                        <p>învățătoare Josu Luminița</p>
+                        <p>24 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>I B</p>
+                        <p>învățătoare Florea Lucia</p>
+                        <p>25 elevi</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="border-2 border-zinc-400 p-2">
-            <h1 class="font-noto text-3xl font-bold text-[#123]">Învățământ liceal</h1>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a IX-a</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>IX MI1</p>
-                    <p>diriginte Barta Tiberiu</p>
-                    <p>26 elevi</p>
-                </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>IX MI2</p>
-                    <p>diriginte Codrea Claudia</p>
-                    <p>24 elevi</p>
+        <div class="p-2 flex flex-col gap-6">
+            <h1 class="font-noto text-3xl font-bold text-[#123]  flex justify-center items-center mb-5">Învățământ gimanzial</h1>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+                <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele a V-a</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>V A</p>
+                        <p>diriginte Pall Daniela</p>
+                        <p>28 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>V B</p>
+                        <p>diriginte Ghertenișan Adela</p>
+                        <p>29 elevi</p>
+                    </div>
                 </div>
             </div>
-            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400 pt-3">Clasele a X-a</h2>
-            <div class="flex flex-col">
-                <div class="flex text-base md:text-lg gap-3 pt-2">
-                    <p>X MI 1</p>
-                    <p>diriginte Toma Rodica</p>
-                    <p>27 elevi</p>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+                <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele a VI-a</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>VI A</p>
+                        <p>diriginte Clanița Iadran</p>
+                        <p>28 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>VI B</p>
+                        <p>diriginte Ghelbere Dana</p>
+                        <p>28 elevi</p>
+                    </div>
                 </div>
-                <div class="flex text-base md:text-lg gap-3">
-                    <p>X MI2</p>
-                    <p>diriginte Grecu Florina</p>
-                    <p>30 elevi</p>
+            </div>
+        </div>
+        <div class="p-2 flex flex-col gap-6">
+            <h1 class="font-noto text-3xl font-bold text-[#123] flex justify-center items-center mb-5">Învățământ liceal</h1>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+                <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele a IX-a</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>IX MI1</p>
+                        <p>diriginte Barta Tiberiu</p>
+                        <p>26 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>IX MI2</p>
+                        <p>diriginte Codrea Claudia</p>
+                        <p>24 elevi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-2 border-zinc-400 p-4 rounded-3xl">
+            <h2 class="font-noto text-xl font-semibold text-[#762424] border-b-2 border-zinc-400">Clasele a X-a</h2>
+                <div class="flex flex-col">
+                    <div class="flex text-base md:text-lg gap-3 pt-2">
+                        <p>X MI 1</p>
+                        <p>diriginte Toma Rodica</p>
+                        <p>27 elevi</p>
+                    </div>
+                    <div class="flex text-base md:text-lg gap-3">
+                        <p>X MI2</p>
+                        <p>diriginte Grecu Florina</p>
+                        <p>30 elevi</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+    <script src="./main.js"></script>
+</html>
