@@ -822,16 +822,16 @@ video {
   height: 100vh;
 }
 
+.h-\[20vw\]{
+  height: 20vw;
+}
+
 .h-\[300px\]{
   height: 300px;
 }
 
 .h-\[40px\]{
   height: 40px;
-}
-
-.h-\[40vh\]{
-  height: 40vh;
 }
 
 .h-\[50px\]{
@@ -918,12 +918,12 @@ video {
   width: 100%;
 }
 
-.w-\[100vw\]{
-  width: 100vw;
+.w-\[100px\]{
+  width: 100px;
 }
 
-.w-\[120px\]{
-  width: 120px;
+.w-\[100vw\]{
+  width: 100vw;
 }
 
 .w-\[200px\]{
@@ -1732,10 +1732,6 @@ video {
 
   .md\:gap-10{
     gap: 2.5rem;
-  }
-
-  .md\:gap-2{
-    gap: 0.5rem;
   }
 
   .md\:rounded-2xl{

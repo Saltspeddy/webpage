@@ -23,7 +23,7 @@
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md opacity-0 hidden absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
@@ -62,13 +62,100 @@
         </div>
     </div>
     <div class="pt-20">
-        <div class="relative flex flex-col w-[100vw] h-[40vh] bg-cover bg-no-repeat bg-center" style="background-image:url(./assets/Interreg-IPA-RO-RS-logo-vers.-2-ENG-t.png);"></div>
+        <div class="relative flex flex-col w-[100vw] h-[20vw] bg-cover bg-no-repeat bg-center" style="background-image:url(./assets/Interreg-IPA-RO-RS-logo-vers.-2-ENG-t.png);"></div>
         <div class="w-[100vw] bg-[#F4F4F9] text-base pl-8 pr-16 -z-5 pb-3">
             <h1 class="font-noto text-3xl font-semibold text-[#123]">Template title</h1>
             <h4 class="font-noto text-lg font-semibold text-[#762424] pt-3 pb-2">Template subtitle</h4>
             <p class="indent-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quis delectus ea sapiente nemo maiores accusamus ex repellat aliquam ut adipisci illum laudantium fugiat velit ducimus facilis dolore dignissimos? Ea natus cum culpa modi, animi nobis sint totam illo nulla error laborum architecto! Porro eaque, provident quos ullam aspernatur commodi blanditiis delectus aut alias inventore dignissimos assumenda sequi placeat maxime dolorum, corrupti fuga molestias ipsa! Dolores officiis unde exercitationem aperiam aliquam totam porro, aspernatur nihil! Cupiditate nesciunt nemo corporis delectus impedit nisi eveniet dolor fugit, quod, asperiores reprehenderit nostrum iure aut ad, voluptates nihil fugiat praesentium alias rerum similique? Obcaecati, nemo. Iusto laudantium possimus commodi, repellendus, aut id cupiditate sequi autem tempore saepe nobis. Iure, atque nobis harum possimus repellat dolor voluptate repudiandae fugit nam! Illum ducimus est fugiat, doloremque sint vel nemo. Libero, soluta. Quasi officiis unde laudantium non aliquid voluptatibus rem ipsa facere quia eveniet, mollitia neque ab, atque, illo maxime consequatur numquam nihil ratione odio est. Vero eius fugit obcaecati, iure est temporibus, ex a accusantium suscipit non exercitationem molestias sapiente maxime blanditiis corrupti molestiae officiis, rerum magni nostrum? Vitae, ratione natus! Consectetur labore placeat dolore libero molestiae quibusdam accusamus? Perferendis aperiam quibusdam id beatae ducimus dolorem facilis quaerat iste libero optio doloremque, quam eligendi accusantium laudantium tempore omnis eius modi ratione maiores eum praesentium obcaecati nihil dignissimos. Laborum dicta dignissimos ab esse ipsum odio quos impedit enim saepe, est, voluptate amet ducimus quas repudiandae libero incidunt provident? Consequatur iste modi quo recusandae eius excepturi! Consequuntur, id.</p>
             <h4 class="font-noto text-lg font-semibold text-[#762424] pt-3 pb-3">Template subtitle</h4>
             <p class="indent-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ex aperiam, consequatur error repellat dolorum odio nobis omnis voluptatibus ea repudiandae quidem sapiente quaerat exercitationem laborum atque facere non enim beatae, quam quae ad cum aliquam quia? Illum sapiente obcaecati quod placeat! Quasi enim est omnis, voluptas iusto quidem libero inventore rem maxime nemo illo? Et id quo, fuga eum, neque eligendi earum voluptates porro amet reiciendis fugiat laboriosam alias doloremque consequuntur delectus beatae eius asperiores quia. Eaque enim veritatis ipsum nihil facilis. Facilis, harum laudantium. Quia, cupiditate laboriosam atque quasi non blanditiis rem praesentium, nam corrupti porro dignissimos deserunt corporis voluptatem consequatur, tenetur nostrum debitis error laborum magnam laudantium fugiat inventore. Molestiae earum eos aut totam corrupti, iste dolorum excepturi ab veniam repellendus soluta cumque, sed officiis! Repellendus voluptates ipsa aut accusantium incidunt dolorem. Doloremque, temporibus. Ratione unde possimus ducimus at voluptatibus perferendis molestiae ullam aspernatur laborum ipsa. Quasi!</p>
+        </div>
+    </div>
+    <div class="relative pt-12 pb-32 flex justify-center items-center bg-[#f4f8fb]">
+        <div class=" justify-center galery gap-6">
+            <div id="bgimage1" onclick="openImagePhone(1)" onmouseleave="lightup(1)" onmouseover="darken(1)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-1.jpg); overflow: hidden;">
+                <div id="container1" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage2" onclick="openImagePhone(2)" onmouseleave="lightup(2)" onmouseover="darken(2)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-2.jpg); overflow: hidden;">
+                <div id="container2" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(2)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage3" onclick="openImagePhone(3)" onmouseleave="lightup(3)" onmouseover="darken(3)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 col-span-2 row-span-2" style="background-image: url(./assets/iparors-3.jpg); overflow: hidden;">
+                <div id="container3" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(3)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage4" onclick="openImagePhone(4)" onmouseleave="lightup(4)" onmouseover="darken(4)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 row-span-2" style="background-image: url(./assets/iparors-6.jpg); overflow: hidden;">
+                <div id="container4" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(4)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage5" onclick="openImagePhone(5)" onmouseleave="lightup(5)" onmouseover="darken(5)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-5.jpg); overflow: hidden;">
+                <div id="container5" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(5)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+            <div id="bgimage6" onclick="openImagePhone(6)" onmouseleave="lightup(6)" onmouseover="darken(6)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-12.jpg); overflow: hidden;">
+                <div id="container6" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(6)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>            
+            <div id="bgimage7" onclick="openImagePhone(7)" onmouseleave="lightup(7)" onmouseover="darken(7)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-7.jpg); overflow: hidden;">
+                <div id="container7" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(7)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+
+            <div id="bgimage8" onclick="openImagePhone(8)" onmouseleave="lightup(8)" onmouseover="darken(8)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/iparors-8.jpg); overflow: hidden;">
+                <div id="container8" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
+                    <button onclick="openImage(8)">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="openImage" class="z-10 w-[100vw] h-[calc(100vh-4rem)] top-16 translate-x-[100vw] flex justify-center items-center fixed bg-opacity-70 bg-black duration-500">
+        <button onclick="closeImage()" class="z-30 absolute top-0 left-2 h-12 w-12">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg> 
+        </button>
+        <div class="relative w-full h-[60vh] flex justify-center items-center">
+            <img id="openedImage" src="" alt="" class="z-[100] object-contain md:max-w-[80vw] md:max-h-[80vh] max-w-[90vw] max-h-[80vh]">
         </div>
     </div>
     <footer class="bg-[#123] font-roboto text-base text-[#999999] ">
@@ -97,15 +184,16 @@
         </div>
         <div class="w-[100vw] mt-6 flex flex-col justify-center items-center">
             <p>&copy;2023 Colegiul Național Bănățean</p>
-            <div class="flex md:mt-0 mt-6 md:flex-row flex-col md:gap-2 gap-0">
+            <div class="flex items-center mt-6 flex-col gap-0">
                 <div>Proiect realizat de: </div>
-                <div>Mâțu Dragoș-Gabriel, </div>
-                <div>Uibar Robert-Constantin, </div>
-                <div>Florea Irina-Ioana, </div>
-                <div>David Daria-Cristina </div>
+                <div>David Daria-Cristina (frontend)</div>
+                <div>Florea Irina-Ioana (frontend) </div>
+                <div>Mihoc Alexandru-Ionuț (fotograf) </div>
+                <div>Mâțu Dragoș-Gabriel (coordonator frontend) </div>
+                <div>Uibar Robert-Constantin (coordonator proiect / backend)</div>
             </div>
         </div>
     </footer>
 </body>
-    <script src="./main.js"></script>
+<script src='./main.js'></script>
 </html>

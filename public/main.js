@@ -11,7 +11,7 @@ if (window.location.pathname=='/index.html' || window.location.pathname=='/' || 
     setInterval(() => {
         autoSlideShow();
       }, "3000");
-
+      document.querySelector("#vid").volume = 0.2;
 }
 // [document.querySelector(".galery").children].forEach(child => child)
 if(width > 1260) isDesktop = true;
@@ -115,7 +115,6 @@ function scrollNavBar(){
         document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
     }
 }
-// document.querySelector("#vid").volume = 0.2;
 
 ///////////////////////////////////ISTORIC/////////////////////////////////////////////////
 
@@ -225,28 +224,6 @@ function dropInformatii(value){
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
-// let droped = false;
-// function dropDown(value){
-//     if( value == 0 ){
-//         document.querySelector("#dropDown").style.display = "flex";
-//         setTimeout(() => {
-//             document.querySelector("#dropDown").style.opacity = "1";
-//         }, 100)
-//         droped = true;
-//     }
-//     else if( value == 1 ){
-//         if( droped == true ) document.querySelector("#dropDown").style.opacity = "1";
-//         makeDropedFalse()
-//     }
-// }
-// function dropFade(){
-//     if( droped == false){
-//         document.querySelector("#dropDown").style.opacity = "0";
-//         setTimeout(() => {
-//             document.querySelector("#dropDown").style.display = "none";
-//         }, 500)
-//     }
-// }
 let droped = false;
 function dropDown(value){
     if( value == 0 ){
