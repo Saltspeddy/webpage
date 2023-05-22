@@ -6,14 +6,18 @@ let topOffset = window.pageYOffset
 let width = screen.width
 let contor = 1;
 let isDesktop;
+window.addEventListener('DOMContentLoaded', function() {});
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
-if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
+if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html' || window.location.pathname=='/public/anunturi.html' || window.location.pathname=='/anunturi.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
     setInterval(() => {
         autoSlideShow();
-      }, "3000");
-      document.querySelector("#vid").volume = 0.2;
+      }, "5000");
+
+    if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html'){
+        document.querySelector("#vid").volume = 0.2;
+    }
 }
-// [document.querySelector(".galery").children].forEach(child => child)
+
 if(width > 1260) isDesktop = true;
 else isDesktop =false
 
@@ -46,11 +50,11 @@ function lightup(value){
 }
 
 function autoSlideShow(){
+    let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
+    let sliderWidth = document.querySelector("#slideShow").clientWidth;
     let Slider = document.querySelector("#slideShow");
-    if(width > 767){
-        Slider.style.transform = "translateX("+ (contor - 1) * -40 +"vw)";
-    }
-    else Slider.style.transform = "translateX("+ (contor - 1) * -90 +"vw)";
+    Slider.style.transform = "translateX("+ (contor - 1) * -singleSlideWidth +"px)";
+
     for( let i = 1 ; i <= 5 ; i++){
         if(i != contor){
             document.querySelector("#i"+i).style.opacity = "0.5";
@@ -65,10 +69,9 @@ function autoSlideShow(){
     }
     if( contor === 5 ){
         setTimeout(function(){
-            if(width > 767)
-                Slider.style.transform = "translateX(-200vw)";
-            else Slider.style.transform = "translateX(-450vw)";
-        },2500)
+            Slider.style.transform = "translateX(-"+ (sliderWidth - singleSlideWidth) +"px)";
+
+        },4500)
         contor = 1;
     }
     else if( contor === 1 ){
@@ -81,13 +84,31 @@ function autoSlideShow(){
     }
 }
 
+// function searchResults( searchText , searchURL ){
+//     this.searchText = searchText;
+//     this.searchURL = searchURL;
+// }
+let searchResults = [
+    {   
+        "textSearch":"olimpici",
+        "url":"http://www.w3schools.com",
+    },
+    {   
+        "textSearch":"Atlas",
+        "url":"https://www.tutorialspoint.com/how-to-stop-refreshing-the-page-on-submit-in-javascript",
+    },
+]
+
+function Search(){
+    for( let i = 0 ; i < searchResults.length ; i++ )
+        if(document.querySelector("#searchBar").value == searchResults[i].textSearch)
+            window.location.href = searchResults[i].url;
+}
+
 function slideShow(value){
-    if(width > 767){
-        document.querySelector("#slideShow").style.transform = "translateX("+ (value - 1) * -40 +"vw)";
-    }
-    else{
-        document.querySelector("#slideShow").style.transform = "translateX("+ (value - 1) * -90 +"vw)";
-    }
+    let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
+    document.querySelector("#slideShow").style.transform = "translateX("+ (value - 1) * -singleSlideWidth +"px)";
+
     for( let i = 1 ; i <= 5 ; i++){
         if(i != value){
             document.querySelector("#i"+i).style.opacity = "0.5";
@@ -222,6 +243,14 @@ function dropInformatii(value){
     }
     boolInformatii[value] = !boolInformatii[value]; 
 }
+
+///////////////////////////////////GENERAL/////////////////////////////////////////////////
+if (window.location.pathname=='/contact.html' || window.location.pathname=='/public/contact.html') {
+    let inputs = document.querySelector("form").childNodes;
+    for( let i  = 1 ; i <= inputs.length ; i = i + 2 ){
+        inputs[i].style.outline = "none";
+    }
+    }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
 let droped = false;
