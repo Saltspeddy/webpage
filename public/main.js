@@ -98,7 +98,7 @@ let searchResults = [
         "url":"https://www.tutorialspoint.com/how-to-stop-refreshing-the-page-on-submit-in-javascript",
     },
 ]
-
+searchResults.push()
 function Search(){
     for( let i = 0 ; i < searchResults.length ; i++ )
         if(document.querySelector("#searchBar").value == searchResults[i].textSearch)
@@ -229,7 +229,7 @@ function dropCatedre(value){
 
 ///////////////////////////////////INFORMATII/////////////////////////////////////////////////
 let boolInformatii = [];
-for (let index = 1; index <= 3; index++) {
+for (let index = 1; index <= 6; index++) {
     boolInformatii[index] = true;
 }
 function dropInformatii(value){
@@ -244,13 +244,30 @@ function dropInformatii(value){
     boolInformatii[value] = !boolInformatii[value]; 
 }
 
-///////////////////////////////////GENERAL/////////////////////////////////////////////////
+///////////////////////////////////CONTACT/////////////////////////////////////////////////
 if (window.location.pathname=='/contact.html' || window.location.pathname=='/public/contact.html') {
     let inputs = document.querySelector("form").childNodes;
     for( let i  = 1 ; i <= inputs.length ; i = i + 2 ){
         inputs[i].style.outline = "none";
     }
     }
+
+///////////////////////////////////CREARE PROIECT/////////////////////////////////////////////////
+if (window.location.pathname=='/creare%20proiect.html' || window.location.pathname=='/public/creare%20proiect.html') {
+    function previewBeforeUpload(id){
+        document.querySelector("#"+id).addEventListener("change",function(e){
+          if(e.target.files.length == 0){
+            return;
+          }
+          let file = e.target.files[0];
+          let url = URL.createObjectURL(file);
+          document.querySelector("#preview-image").src = url;
+        });
+      }
+      
+      previewBeforeUpload("file");
+}
+
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
 let droped = false;
