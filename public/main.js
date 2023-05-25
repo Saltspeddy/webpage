@@ -266,8 +266,9 @@ if (window.location.pathname=='/creare%20proiect.html' || window.location.pathna
       }
       
       previewBeforeUpload("file");
-}
 
+      
+}
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
 let droped = false;
