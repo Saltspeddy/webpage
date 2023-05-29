@@ -69,7 +69,7 @@
         </div>
     </div>
 
-    <div class="w-[100vw] min-h-[80vh] grid grid-cols-2 py-[80px]">
+    <div class="w-[100vw] min-h-[100vh] grid grid-cols-2 py-[80px]">
         <form class="flex flex-col items-center gap-4" action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input type="file" id="file" name="emblema" style="display: none;">
@@ -92,7 +92,7 @@
                 </select>
             </fieldset>
             <div id="image-preview-container" class="flex flex-wrap justify-center gap-4"></div>
-            <div class="flex relative w-[100%] h-10 items-center">
+            <div class="flex relative w-[100%] h-20 items-center">
     
                 <input type="file" id="files" name="poze[]" multiple style="display: none;">
         
@@ -121,7 +121,7 @@
                 </label>
     
             </div>
-            <button class="absolute -bottom-3 right-3 p-4 border-2 rounded-3xl flex justify-center items-center" type="submit">Creare</button>
+            <button class="absolute bottom-5 right-3 p-4 border-2 rounded-3xl flex justify-center items-center" type="submit">Creare</button>
 
         </form>
     </div>

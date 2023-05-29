@@ -566,24 +566,16 @@ video {
   position: relative;
 }
 
-.-bottom-3{
-  bottom: -0.75rem;
-}
-
 .bottom-0{
   bottom: 0px;
 }
 
-.left-0{
-  left: 0px;
+.bottom-5{
+  bottom: 1.25rem;
 }
 
 .left-2{
   left: 0.5rem;
-}
-
-.left-5{
-  left: 1.25rem;
 }
 
 .left-\[calc\(50vw-40px\)\]{
@@ -628,14 +620,6 @@ video {
 
 .top-4{
   top: 1rem;
-}
-
-.top-\[0vh\]{
-  top: 0vh;
-}
-
-.top-\[37vh\]{
-  top: 37vh;
 }
 
 .-z-10{
@@ -918,16 +902,12 @@ video {
   height: 70vh;
 }
 
-.h-\[90vh\]{
-  height: 90vh;
+.h-\[calc\(100\%-41px\)\]{
+  height: calc(100% - 41px);
 }
 
 .h-\[calc\(100vh-4rem\)\]{
   height: calc(100vh - 4rem);
-}
-
-.h-auto{
-  height: auto;
 }
 
 .h-full{
@@ -964,10 +944,6 @@ video {
 
 .w-24{
   width: 6rem;
-}
-
-.w-44{
-  width: 11rem;
 }
 
 .w-5{
@@ -1036,6 +1012,10 @@ video {
 
 .w-\[64px\]{
   width: 64px;
+}
+
+.w-\[80\%\]{
+  width: 80%;
 }
 
 .w-\[80vw\]{
@@ -1621,6 +1601,10 @@ video {
   line-height: 1;
 }
 
+.text-\[10vw\]{
+  font-size: 10vw;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1778,6 +1762,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#762424\]:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(118 36 36 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-slate-300:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
@@ -1798,6 +1787,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .hover\:opacity-70:hover{
   opacity: 0.7;
 }
@@ -1809,16 +1803,16 @@ video {
 }
 
 @media (min-width: 640px){
-  .sm\:top-\[40vh\]{
-    top: 40vh;
-  }
-
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .sm\:p-2{
-    padding: 0.5rem;
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
+  .sm\:pl-2{
+    padding-left: 0.5rem;
   }
 }
 
@@ -1851,10 +1845,6 @@ video {
     height: 3.5rem;
   }
 
-  .md\:h-24{
-    height: 6rem;
-  }
-
   .md\:h-\[100\%\]{
     height: 100%;
   }
@@ -1871,16 +1861,16 @@ video {
     width: 3.5rem;
   }
 
-  .md\:w-28{
-    width: 7rem;
-  }
-
   .md\:w-40{
     width: 10rem;
   }
 
   .md\:w-96{
     width: 24rem;
+  }
+
+  .md\:w-\[100vw\]{
+    width: 100vw;
   }
 
   .md\:w-\[240vw\]{
@@ -1990,6 +1980,11 @@ video {
 
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-xl{
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
 

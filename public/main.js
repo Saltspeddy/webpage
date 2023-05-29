@@ -8,7 +8,7 @@ let contor = 1;
 let isDesktop;
 window.addEventListener('DOMContentLoaded', function() {});
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
-if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html' || window.location.pathname=='/public/anunturi.html' || window.location.pathname=='/anunturi.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
+if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html' || window.location.pathname=='/public/anunturi.html' || window.location.pathname=='/anunturi.html' || window.location.pathname=='/public/istoric.html' || window.location.pathname=='/istoric.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
     setInterval(() => {
         autoSlideShow();
       }, "5000");
@@ -279,7 +279,6 @@ function dropDown(value){
             document.querySelector("#dropDown").style.opacity = "1";
         },100)
         droped = true;
-        console.log(3);
     }
     else if (value == 1){
         if(droped == true){document.querySelector("#dropDown").style.opacity = "1";
