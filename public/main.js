@@ -229,7 +229,7 @@ function dropCatedre(value){
 
 ///////////////////////////////////INFORMATII/////////////////////////////////////////////////
 let boolInformatii = [];
-for (let index = 1; index <= 6; index++) {
+for (let index = 1; index <= 7; index++) {
     boolInformatii[index] = true;
 }
 function dropInformatii(value){
@@ -271,7 +271,7 @@ if (window.location.pathname=='/creare%20proiect.html' || window.location.pathna
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
-let droped = false;
+/* let droped = false;
 function dropDown(value){
     if( value == 0 ){
         document.querySelector("#dropDown").style.display = "block";
@@ -287,18 +287,17 @@ function dropDown(value){
         },100)}
         makeDropedFalse();
     }
-
 }
 function dropFade(){
     document.querySelector("#dropDown").style.opacity = "0";
     setTimeout(() => {
         document.querySelector("#dropDown").style.display = "none";
-    },100)
+     },100)*/
 
-}
-function makeDropedFalse(){
-    droped = false;
-}
+// }
+// function makeDropedFalse(){
+//     droped = false;
+// }
 
 let opened = false;
 function secondaryMenu(){

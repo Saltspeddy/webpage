@@ -27,6 +27,10 @@
     }
 }
 
+.grid-template-column{
+    grid-template-columns: 10% 70% 20%;
+}
+
 @media (max-width: 600px) {
     .galery{
         display: grid;

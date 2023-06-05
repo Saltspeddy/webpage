@@ -20,11 +20,11 @@
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
-            <a onmouseover="dropDown(0)" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
+            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
             <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
         </div>
-            <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+            <!-- <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="./anunturi.html">Anunțuri</a>
                     <a href="">Management</a>
@@ -38,7 +38,7 @@
                     <a href="">Examene</a> 
                     <a href="">Biblioteca școlii</a>
                 </div>
-            </div>
+            </div> -->
         <div onclick="secondaryMenu()" class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
             <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -87,9 +87,12 @@
             </button>
             <div id="info4" class="hidden">
                 <div class="ml-6 md:text-3xl text-lg flex flex-col">
-                    <div class="hover:text-[#282C35]">Echipa de conducere</div>
+
                     <div class="hover:text-[#282C35]">Consiliul administrativ</div>
                     <div class="hover:text-[#282C35]">Consilier educativ</div>
+                    <div class="md:w-96 w-52 mt-4 mb-2 border-b-4 border-gray-400">Echipa de management</div>
+                    <div class="hover:text-[#282C35] duration-500">programări Tănasie</div>
+                    <div class="hover:text-[#282C35] duration-500">programări Lobază</div>
                 </div>
             </div>
             <button>
@@ -107,7 +110,6 @@
                     <div class="hover:text-[#282C35] duration-500">Contabilitate</div>
                     <div class="hover:text-[#282C35] duration-500">Administrator</div>
                     <div class="hover:text-[#282C35] duration-500">Informatician</div>
-                    <div class="hover:text-[#282C35] duration-500">Programări</div>
                     <div class="hover:text-[#282C35] duration-500">Concursuri de angajare</div>
                 </div>
             </div>
@@ -160,12 +162,21 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
             </a>
-            <a href="./programari.html" class="w-[100%] h-12 md:text-4xl p-3 border-b-4 border-gray-500 rounded-lg flex justify-between items-center hover:text-[#282C35] hover:border-[#282C35] duration-500">
-                <div>Programări</div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-14 md:h-14 w-7 h-7">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>
-            </a>
+            <button>
+                <div onclick="dropInformatii(7)" class="w-[100%] h-12 md:text-4xl p-3 border-b-4 border-gray-500 rounded-lg flex justify-between items-center hover:text-[#282C35] hover:border-[#282C35] duration-500">
+                    <p>Repere legislative</p>
+                    <svg id="arrow7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-14 md:h-14 w-7 h-7 duration-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+            </button>
+            <div id="info7" class="hidden">
+                <div class="ml-6 md:text-3xl text-lg flex flex-col">
+                    <a href="./olimpici.html" class="hover:text-[#282C35]">ROI</a>
+                    <a href="./CEX CNB.html" class="hover:text-[#282C35]">regulament intern</a>
+                    <a href="./CEX CNB.html" class="hover:text-[#282C35]">săli sport</a>
+                </div>
+            </div>
             <div class="w-[100%] h-12 md:text-4xl p-3 border-b-4 border-gray-500 rounded-lg flex justify-between items-center hover:text-[#282C35] hover:border-[#282C35] duration-500">
                 <p>Consiliul elevilor</p> 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-14 md:h-14 w-7 h-7">
