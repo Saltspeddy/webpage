@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="ro" style="overflow-x: hidden">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="icon"
       type="image/x-icon"
-      href="/public/assets/CNB_sgV2-removebg-preview.png"
+      href="/assets/CNB_sgV2-removebg-preview.png"
     />
-    <title>Activități extrașcolare</title>
   </head>
-  <body class="bg-[#F4F4F9] font-roboto" style="overflow-x: hidden">
+
+  <body
+    onload="makeImage()"
+    class="bg-[#F4F4F9] font-roboto"
+    style="overflow-x: hidden"
+  >
     <nav
       class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed"
     >
       <img
         class="h-14 md:ml-16 ml-10 fixed"
-        src="./assets/CNB_sgV2-removebg-preview.png"
+        src="/assets/CNB_sgV2-removebg-preview.png"
         alt="CNB logo"
       />
       <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
@@ -31,52 +34,62 @@
       >
         <a
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./index.html"
+          href="/"
           >Acasă</a
         >
         <a
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./istoric.html"
+          href="/istoric"
           >Istoric</a
         >
         <a
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./catedre.html"
+          href="/catedre"
           >Catedre</a
         >
         <a
           onmouseover="dropDown(0)"
           onmouseleave="dropFade()"
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./informatii.html"
+          href="/informatii"
           >Informații</a
         >
         <a
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./proiecte.html"
+          href="/proiecte"
           >Proiecte</a
         >
         <a
           class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
-          href="./contact.html"
+          href="/contact"
           >Contact</a
         >
       </div>
-      <!-- <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
-            <div class="text-white flex flex-col gap-2">
-                <a href="./template.html">Anunțuri</a>
-                <a href="">Management</a>
-                <a href="">Personal administrativ</a>
-                <a href="">Ofertă educațională</a> 
-                <a href="">Transferuri</a>
-                <a href="">Înscrieri</a>
-                <a href="">Consiliul elevilor</a>
-                <a href="">Concursuri și olimpiade</a>
-                <a href="">Burse școlare</a>
-                <a href="">Examene</a> 
-                <a href="">Biblioteca școlii</a>
-            </div>
-        </div>  -->
+      <button class="xl:block hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="{1.5}"
+          stroke="white"
+          class="w-8 h-8 duration-500 fixed right-5 top-4 bg-opacity-60 hover:bg-slate-300 rounded-full p-1"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+          />
+        </svg>
+      </button>
+      <form onsubmit="Search(); return false" action="">
+        <input
+          id="searchBar"
+          class="w-[10vw] xl:block hidden fixed right-16 top-3 rounded-3xl p-2 text-sm"
+          type="text"
+          name=""
+          id=""
+        />
+      </form>
       <div
         onclick="secondaryMenu()"
         class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed"
@@ -102,75 +115,82 @@
       class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300"
     >
       <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
-        <a href="./index.html">Acasă</a>
-        <a href="./istoric.html">Istoric</a>
-        <a href="./catedre.html">Catedre</a>
-        <a href="./informatii.html">Informații</a>
+        <a href="/index">Acasă</a>
+        <a href="/istoric">Istoric</a>
+        <a href="/catedre">Catedre</a>
+        <a href="/informatii">Informații</a>
         <div class="ml-4 text-lg flex flex-col">
-          <a href="./template.html">Anunțuri</a>
-          <a href="">Management</a>
-          <a href="">Personal administrativ</a>
+          <a href="/anunturi">Anunțuri</a>
           <a href="">Ofertă educațională</a>
-          <a href="">Transferuri</a>
-          <a href="">Înscrieri</a>
           <a href="">Consiliul elevilor</a>
           <a href="">Concursuri și olimpiade</a>
           <a href="">Burse școlare</a>
           <a href="">Examene</a>
+          <a href="">Administrativ</a>
           <a href="">Biblioteca școlii</a>
         </div>
-        <a href="./proiecte.html">Proiecte</a>
-        <a href="./contact.html">Contact</a>
+        <a href="/proiecte">Proiecte</a>
+        <a href="/contact">Contact</a>
       </div>
     </div>
-    <div
-      class="grid min-h-[80vh] grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-[95vw] gap-5 font-roboto pt-20 px-8 md:px-0 m-auto font-medium text-lg items-center pb-4"
-    >
-      <a
-        href="./Heavenly Hell.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-contain bg-no-repeat duration-500"
-        style="background-image: url(./assets/HH/logo\ hh.png)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+
+    <body class="bg-[#F4F4F9] font-roboto" style="overflow-x: hidden">
+      <div
+        class="bg-cover bg-center bg-no-repeat pt-20 -z-10 h-64"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url(assets/colegiul_banatean.jpg);
+        "
+      ></div>
+      <div class="w-[100vw] min-h-[50vh] bg-[#F4F4F9] text-base py-8 -z-5">
+        <h1
+          class="font-noto text-3xl font-semibold text-[#123] pt-3 pb-7 text-center"
         >
-          Trupa de teatru Heavenly Hell
+          Template administrativ
+        </h1>
+        <div class="w-[100vw] flex justify-center">
+          <div
+            class="grid w-[90vw] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
+          >
+            <div
+              class="flex flex-col items-center border-2 border-zinc-400 rounded-3xl p-2"
+            >
+              <h2
+                class="font-noto font-semibold text-[#762424] text-lg pt-3 pb-2"
+              >
+                Program de lucru cu publicul
+              </h2>
+              <p>Luni-Vineri: 9:30-12:30</p>
+            </div>
+            <div
+              class="flex flex-col items-center border-2 border-zinc-400 rounded-3xl p-2"
+            >
+              <h2
+                class="font-noto font-semibold text-[#762424] text-lg pt-3 pb-2"
+              >
+                Componență administrativ
+              </h2>
+              <p>funcție membru 1 Prenume NUME</p>
+              <p>funcție membru 2 Prenume NUME</p>
+            </div>
+            <div
+              class="flex flex-col lg:col-span-1 md:col-span-2 col-span-1 items-center border-2 border-zinc-400 rounded-3xl p-2"
+            >
+              <h2
+                class="font-noto font-semibold text-[#762424] text-lg pt-3 pb-2"
+              >
+                Persoane de contact
+              </h2>
+              <p>Prenume NUME nr telefon</p>
+            </div>
+          </div>
         </div>
-      </a>
-      <a
-        href="./Atlas.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/Atlas/logo3.jpeg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
-        >
-          Echipa de robotică Atlas
-        </div>
-      </a>
-      <a
-        href="./Zenith.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/scan0004.jpg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
-        >
-          Clubul de dezbateri Zenith
-        </div>
-      </a>
-      <a
-        href="./template proiecte.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/scan0006.jpg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
-        >
-          Activitate 4
-        </div>
-      </a>
-    </div>
+      </div>
+    </body>
+
     <footer class="bg-[#123] font-roboto text-base text-[#999999]">
       <div class="flex md:flex-row flex-col pt-4 md:justify-between mx-10">
         <div class="md:w-[50vw] flex flex-col items-center">
@@ -225,14 +245,29 @@
         <p>&copy;2023 Colegiul Național Bănățean</p>
         <div class="flex items-center mt-6 flex-col gap-0">
           <div>Proiect realizat de:</div>
-          <div>Daria-Cristina DAVID (frontend)</div>
-          <div>Irina-Ioana FLOREA (frontend)</div>
-          <div>Alexandru-Ionuț MIHOC (fotograf)</div>
-          <div>Dragoș-Gabriel MÂȚU (coordonator frontend)</div>
-          <div>Robert-Constantin UIBAR (coordonator proiect / backend)</div>
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <p>Daria-Cristina DAVID</p>
+            <p class="sm:pl-2">(frontend)</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <p>Irina-Ioana FLOREA</p>
+            <p class="sm:pl-2">(frontend)</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <p>Alexandru-Ionuț MIHOC</p>
+            <p class="sm:pl-2">(fotograf)</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <p>Dragoș-Gabriel MÂȚU</p>
+            <p class="sm:pl-2">(coordonator frontend / frontend)</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <p>Robert-Constantin UIBAR</p>
+            <p class="sm:pl-2">(coordonator echipă / backend)</p>
+          </div>
         </div>
       </div>
     </footer>
   </body>
-  <script src="./main.js"></script>
+  <script src="/static/main.js"></script>
 </html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/CNB_sgV2-removebg-preview.png"
+    />
+    <title>Consiliul administrativ și educativ</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/public/assets/CNB_sgV2-removebg-preview.png"
+    />
+  </head>
+  <body class="h-[100vh] font-roboto bg-[#F4F4F9]" style="overflow-x: hidden">
+    <nav
+      class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed"
+    >
+      <img
+        class="h-14 md:ml-16 ml-10 fixed"
+        src="./assets/CNB_sgV2-removebg-preview.png"
+        alt="CNB logo"
+      />
+      <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
+        <p>Colegiul</p>
+        <p>Național</p>
+        <p>Bănățean</p>
+      </div>
+      <div
+        class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed"
+      >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./index.html"
+          >Acasă</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./istoric.html"
+          >Istoric</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./catedre.html"
+          >Catedre</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./informatii.html"
+          >Informații</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./proiecte.html"
+          >Proiecte</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./contact.html"
+          >Contact</a
+        >
+      </div>
+      <div
+        onclick="secondaryMenu()"
+        class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="white"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </nav>
+    <div
+      id="secondaryMenu"
+      class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300"
+    >
+      <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
+        <a href="./index.html">Acasă</a>
+        <a href="./istoric.html">Istoric</a>
+        <a href="./catedre.html">Catedre</a>
+        <a href="./informatii.html">Informații</a>
+        <div class="ml-4 text-lg flex flex-col">
+          <a href="./anunturi.html">Anunțuri</a>
+          <a href="">Management</a>
+          <a href="">Personal administrativ</a>
+          <a href="">Ofertă educațională</a>
+          <a href="">Transferuri</a>
+          <a href="">Înscrieri</a>
+          <a href="">Consiliul elevilor</a>
+          <a href="">Concursuri și olimpiade</a>
+          <a href="">Burse școlare</a>
+          <a href="">Examene</a>
+          <a href="">Biblioteca școlii</a>
+        </div>
+        <a href="./proiecte.html">Proiecte</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="pt-24 w-[100vw] flex flex-col justify-center items-center">
+      <h1 class="font-noto sm:text-3xl text-xl">
+        Consiliul administrativ și educativ
+      </h1>
+      <div
+        class="md:w-[70vw] w-screen md:min-h-[80vh] min-h-[20vh] grid md:grid-cols-4 grid-cols-2 my-8"
+      >
+        <div class="flex flex-col items-center border-x-2">
+          <p
+            id="function0"
+            onmouseover="appearFunctions(0)"
+            onmouseleave="appearPersonNames(0)"
+            class="py-1 w-full flex justify-center items-center rounded-md hover:bg-[#762424] hover:text-white duration-300"
+          >
+            Matu Dragos Gabriel
+          </p>
+          <p
+            id="function1"
+            onmouseover="appearFunctions(1)"
+            onmouseleave="appearPersonNames(1)"
+            class="py-1 w-full flex justify-center items-center rounded-md hover:bg-[#762424] hover:text-white duration-300"
+          >
+            Filip Miriam-Valentina
+          </p>
+        </div>
+        <div class="flex flex-col items-center border-x-2"></div>
+        <div class="flex flex-col items-center border-x-2"></div>
+        <div class="flex flex-col items-center border-x-2"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

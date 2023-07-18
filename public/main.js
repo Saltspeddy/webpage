@@ -36,6 +36,10 @@ function closeImage(){
     document.querySelector("#openImage").style.transform = "translateX(100vw)";
 }
 
+function openVideo(){
+    
+}
+
 function darken(value){
     if(isDesktop == true){
         document.querySelector("#container"+value).style.transform = "translateY(0px)";
@@ -229,7 +233,7 @@ function dropCatedre(value){
 
 ///////////////////////////////////INFORMATII/////////////////////////////////////////////////
 let boolInformatii = [];
-for (let index = 1; index <= 7; index++) {
+for (let index = 1; index <= 8; index++) {
     boolInformatii[index] = true;
 }
 function dropInformatii(value){
@@ -271,33 +275,6 @@ if (window.location.pathname=='/creare%20proiect.html' || window.location.pathna
 }
 
 ///////////////////////////////////GENERAL/////////////////////////////////////////////////
-/* let droped = false;
-function dropDown(value){
-    if( value == 0 ){
-        document.querySelector("#dropDown").style.display = "block";
-        setTimeout(() => {
-            document.querySelector("#dropDown").style.opacity = "1";
-        },100)
-        droped = true;
-    }
-    else if (value == 1){
-        if(droped == true){document.querySelector("#dropDown").style.opacity = "1";
-        setTimeout(() => {
-            document.querySelector("#dropDown").style.display = "block";
-        },100)}
-        makeDropedFalse();
-    }
-}
-function dropFade(){
-    document.querySelector("#dropDown").style.opacity = "0";
-    setTimeout(() => {
-        document.querySelector("#dropDown").style.display = "none";
-     },100)*/
-
-// }
-// function makeDropedFalse(){
-//     droped = false;
-// }
 
 let opened = false;
 function secondaryMenu(){
@@ -323,4 +300,17 @@ function navmod(){
     else{
         document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
     }
+}
+
+
+///////////////////////////////////NUME/////////////////////////////////////////////////
+
+let personNames = ["Matu Dragos Gabriel", "Filip Miriam-Valentina"]
+let functions = ["billionaire", "trilionaire"]
+function appearFunctions(value){
+    document.querySelector("#function"+value).innerHTML = functions[value]
+}
+
+function appearPersonNames(value){
+    document.querySelector("#function"+value).innerHTML = personNames[value]
 }
