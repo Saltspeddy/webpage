@@ -9,6 +9,13 @@ let isDesktop;
 window.addEventListener('DOMContentLoaded', function() {});
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
 if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html' || window.location.pathname=='/public/anunturi.html' || window.location.pathname=='/anunturi.html' || window.location.pathname=='/public/istoric.html' || window.location.pathname=='/istoric.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
+    let numberOfSlides = document.querySelector("#slideShow").children.length
+    for( let i = 1 ; i < numberOfSlides; i++){
+        document.querySelector("#slideShowButtons").innerHTML += " <button onclick=slideShow("+ i +")><svg id='i"+ i +"' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-5 h-5 opacity-50 hover:opacity-70 duration-500'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/></svg></button>"
+    }
+    let singleSlideWidth = document.querySelector("#container").clientWidth;
+    document.querySelector("#slideShow").style.width = numberOfSlides * singleSlideWidth + "px"
+
     setInterval(() => {
         autoSlideShow();
       }, "5000");
@@ -17,6 +24,7 @@ if (window.location.pathname=='/index.html' || window.location.pathname=='/' || 
         document.querySelector("#vid").volume = 0.2;
     }
 }
+
 
 if(width > 1260) isDesktop = true;
 else isDesktop =false
@@ -59,7 +67,7 @@ function autoSlideShow(){
     let Slider = document.querySelector("#slideShow");
     Slider.style.transform = "translateX("+ (contor - 1) * -singleSlideWidth +"px)";
 
-    for( let i = 1 ; i <= 5 ; i++){
+    for( let i = 1 ; i < document.querySelector("#slideShow").children.length ; i++){
         if(i != contor){
             document.querySelector("#i"+i).style.opacity = "0.5";
             document.querySelector("#i"+i).style.height = "1.25rem";
@@ -71,7 +79,7 @@ function autoSlideShow(){
             document.querySelector("#i"+i).style.width = "1.5rem";
         }
     }
-    if( contor === 5 ){
+    if( contor === document.querySelector("#slideShow").children.length - 1 ){
         setTimeout(function(){
             Slider.style.transform = "translateX(-"+ (sliderWidth - singleSlideWidth) +"px)";
 
@@ -82,7 +90,7 @@ function autoSlideShow(){
         Slider.style.transitionDuration = "0s";
         contor++;
     }
-    else if( contor != 5 && contor != 1){
+    else if( contor != document.querySelector("#slideShow").children.length - 1 && contor != 1){
         contor++;
         Slider.style.transitionDuration = "500ms";
     }
@@ -113,7 +121,7 @@ function slideShow(value){
     let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
     document.querySelector("#slideShow").style.transform = "translateX("+ (value - 1) * -singleSlideWidth +"px)";
 
-    for( let i = 1 ; i <= 5 ; i++){
+    for( let i = 1 ; i < document.querySelector("#slideShow").children.length ; i++){
         if(i != value){
             document.querySelector("#i"+i).style.opacity = "0.5";
             document.querySelector("#i"+i).style.height = "1.25rem";
@@ -143,43 +151,43 @@ function scrollNavBar(){
 
 ///////////////////////////////////ISTORIC/////////////////////////////////////////////////
 
-var images = ["url('./assets/scan0003.jpg')",
-"url('./assets/scan0003.jpg')",
-"url('./assets/scan0004.jpg')",
-"url('./assets/scan0006.jpg')",
-"url('./assets/scan0003.jpg')",
-"url('./assets/scan0004.jpg')",
-"url('./assets/scan0006.jpg')"];
-var index = 0;
-var div = document.createElement('div');
+// var images = ["url('./assets/scan0003.jpg')",
+// "url('./assets/scan0003.jpg')",
+// "url('./assets/scan0004.jpg')",
+// "url('./assets/scan0006.jpg')",
+// "url('./assets/scan0003.jpg')",
+// "url('./assets/scan0004.jpg')",
+// "url('./assets/scan0006.jpg')"];
+// var index = 0;
+// var div = document.createElement('div');
 
-function makeImage() {
-    if(screen.width>700)
-        {div.style.width="80vw";
-        div.style.height="80vh";
-        div.style.backgroundSize="contain";}
-    else
-        {div.style.width="100vw";
-        div.style.height="60vh";
-        div.style.backgroundSize="contain";}   
-   div.style.margin="auto"
-   div.style.backgroundImage=images[0];
-   div.style.backgroundPosition="center center";
-   div.style.backgroundRepeat="no-repeat";
-   document.getElementById('content').appendChild(div);
-}
-if (window.location.pathname=='/istoric.html' || window.location.pathname=='/public/istoric.html') {
-setInterval(() => {
-    slideShowIstoric();
-  }, "3000");
-}
-function slideShowIstoric(){
-    index++;
-    if(index == 7)
-        index = 0;
-    index = index % images.length;
-    div.style.backgroundImage=images[index];
-}
+// function makeImage() {
+//     if(screen.width>700)
+//         {div.style.width="80vw";
+//         div.style.height="80vh";
+//         div.style.backgroundSize="contain";}
+//     else
+//         {div.style.width="100vw";
+//         div.style.height="60vh";
+//         div.style.backgroundSize="contain";}   
+//    div.style.margin="auto"
+//    div.style.backgroundImage=images[0];
+//    div.style.backgroundPosition="center center";
+//    div.style.backgroundRepeat="no-repeat";
+//    document.getElementById('content').appendChild(div);
+// }
+// if (window.location.pathname=='/istoric.html' || window.location.pathname=='/public/istoric.html') {
+// setInterval(() => {
+//     slideShowIstoric();
+//   }, "3000");
+// }
+// function slideShowIstoric(){
+//     index++;
+//     if(index == 7)
+//         index = 0;
+//     index = index % images.length;
+//     div.style.backgroundImage=images[index];
+// }
 
 function moveRight(){
     var div = document.getElementById('content').getElementsByTagName('div')[2];
