@@ -123,62 +123,91 @@
         <a href="./contact.html">Contact</a>
       </div>
     </div>
-    <!-- <div class="min-h-[100vh] w-[100vw] pt-16 grid grid-rows-3">
-        <div class="h-[100%] bg-contain bg-left bg-no-repeat flex items-center justify-end" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://www.mdlpa.ro/uploads/articole/attachments/60641f13b3990710387465.png');">
-            <p>IPA RORS 406</p>
-            <a class="text-white mr-10 p-4 rounded-3xl border-2 border-white hover:bg-white hover:text-black duration-500" href="">Vezi proiectul</a>
-            
-        </div>
-    </div>  -->
+
     <div
-      class="grid min-h-[80vh] grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-[95vw] gap-5 font-roboto pt-20 px-8 md:px-0 m-auto font-medium text-lg items-center pb-4"
+      class="flex flex-wrap justify-center items-center min-h-[80vh] w-[100vw] font-roboto pt-20 text-lg pb-4"
     >
-      <a
-        href="./template proiecte.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-contain bg-no-repeat duration-500"
-        style="
-          background-image: url(https://www.mdlpa.ro/uploads/articole/attachments/60641f13b3990710387465.png);
-        "
+      <div
+        class="md:w-[70vw] w-[90vw] flex flex-wrap justify-center items-center gap-5"
       >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+        <a
+          href="./template proiecte.html"
+          class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 md:w-[22vw] md:h-[18vw] w-[300px] h-[200px] min-w-[300px] min-h-[200px] bg-center bg-contain bg-no-repeat duration-500"
+          style="
+            background-image: url(https://www.mdlpa.ro/uploads/articole/attachments/60641f13b3990710387465.png);
+          "
         >
-          Proiect 1
-        </div>
-      </a>
-      <a
-        href="./ESSD.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/scan0003.jpg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          <div
+            class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          >
+            Proiect 1
+          </div>
+        </a>
+        <a
+          href="./ESSD.html"
+          class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 md:w-[22vw] md:h-[18vw] w-[300px] h-[200px] min-w-[300px] min-h-[200px] bg-center bg-cover bg-no-repeat duration-500"
+          style="background-image: url(./assets/scan0003.jpg)"
         >
-          Proiect 2
-        </div>
-      </a>
-      <a
-        href="./template proiecte.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/scan0004.jpg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          <div
+            class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          >
+            Proiect 2
+          </div>
+        </a>
+        <a
+          href="./template proiecte.html"
+          class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 md:w-[22vw] md:h-[18vw] w-[300px] h-[200px] min-w-[300px] min-h-[200px] bg-center bg-cover bg-no-repeat duration-500"
+          style="background-image: url(./assets/scan0004.jpg)"
         >
-          Proiect 3
-        </div>
-      </a>
-      <a
-        href="./template proiecte.html"
-        class="relative flex flex-col hover:shadow-xl rounded-lg border-2 border-zinc-400 h-[300px] bg-center bg-cover bg-no-repeat duration-500"
-        style="background-image: url(./assets/scan0006.jpg)"
-      >
-        <div
-          class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          <div
+            class="w-[100%] bg-[#F4F4F9] absolute bottom-0 rounded-b-md pt-2 text-center place-self-center h-[50px]"
+          >
+            Proiect 3
+          </div>
+        </a>
+        <a
+          onmouseover="document.querySelector('#project4').style.color = 'black'"
+          onmouseleave="document.querySelector('#project4').style.color = 'gray'"
+          href="./template proiecte.html"
+          class="relative flex flex-col rounded-lg md:w-[22vw] md:h-[18vw] w-[300px] h-[200px] min-w-[300px] min-h-[200px] bg-center bg-cover bg-no-repeat duration-500"
         >
-          Proiect 4
-        </div>
-      </a>
+          <div
+            class="h-[85%] w-full rounded-3xl shadow-2xl hover:scale-105 bg-center bg-cover duration-500"
+            style="
+              overflow: hidden;
+              background-image: url(./assets/scan0006.jpg);
+            "
+          ></div>
+          <div
+            id="project4"
+            class="w-[100%] h-[15%] text-gray-600 hover:text-black flex justify-center items-center rounded-b-md duration-500"
+          >
+            Proiect 4
+          </div>
+        </a>
+        <a
+          onmouseover="document.querySelector('#project5').style.color = 'black'"
+          onmouseleave="document.querySelector('#project5').style.color = 'gray'"
+          href="./template proiecte.html"
+          class="relative flex flex-col rounded-lg md:w-[22vw] md:h-[18vw] w-[300px] h-[200px] min-w-[300px] min-h-[200px] bg-center bg-cover bg-no-repeat duration-500"
+        >
+          <div
+            class="h-[85%] w-full rounded-3xl shadow-2xl"
+            style="overflow: hidden"
+          >
+            <div
+              style="background-image: url(./assets/scan0006.jpg)"
+              class="hover:scale-105 w-full h-full bg-center bg-cover duration-500"
+            ></div>
+          </div>
+          <div
+            id="project5"
+            class="w-[100%] h-[15%] text-gray-600 hover:text-black flex justify-center items-center rounded-b-md duration-500"
+          >
+            Proiect 5
+          </div>
+        </a>
+      </div>
     </div>
     <footer class="bg-[#123] font-roboto text-base text-[#999999]">
       <div class="flex md:flex-row flex-col pt-4 md:justify-between mx-10">

@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Clubul de dezbateri academice Zenith Debate</title>
-  <link rel="icon" type="image/x-icon" href="/public/assets/CNB_sgV2-removebg-preview.png">
-</head>
-<body class="font-roboto bg-[#F4F4F9]" style="overflow-x: hidden;">
-    <nav class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed">
-        <img class="h-14 md:ml-16 ml-10 fixed" src="./assets/CNB_sgV2-removebg-preview.png" alt="CNB logo">  
-        <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
-            <p>Colegiul</p>
-            <p>Național</p>
-            <p>Bănățean</p>
-        </div>             
-        <div class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed">
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./index.html">Acasă</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./istoric.html">Istoric</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./catedre.html">Catedre</a>
-            <a onmouseover="dropDown(0)" onmouseleave="dropFade()" class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./informatii.html">Informații</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./proiecte.html">Proiecte</a>
-            <a class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500" href="./contact.html">Contact</a>
-        </div>
-            <!-- <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Clubul de dezbateri academice Zenith Debate</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/public/assets/CNB_sgV2-removebg-preview.png"
+    />
+  </head>
+  <body class="font-roboto bg-[#F4F4F9]" style="overflow-x: hidden">
+    <nav
+      class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed"
+    >
+      <img
+        class="h-14 md:ml-16 ml-10 fixed"
+        src="./assets/CNB_sgV2-removebg-preview.png"
+        alt="CNB logo"
+      />
+      <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
+        <p>Colegiul</p>
+        <p>Național</p>
+        <p>Bănățean</p>
+      </div>
+      <div
+        class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed"
+      >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./index.html"
+          >Acasă</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./istoric.html"
+          >Istoric</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./catedre.html"
+          >Catedre</a
+        >
+        <a
+          onmouseover="dropDown(0)"
+          onmouseleave="dropFade()"
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./informatii.html"
+          >Informații</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./proiecte.html"
+          >Proiecte</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./contact.html"
+          >Contact</a
+        >
+      </div>
+      <!-- <div onmouseover="dropDown(1)" onmouseleave="dropFade()" id="dropDown" class="-z-30 rounded-b-md hidden opacity-0 absolute w-[200px]  bg-[#762424] p-4 left-[calc(50vw-40px)] top-16 duration-500">
                 <div class="text-white flex flex-col gap-2">
                     <a href="">Anunțuri</a>
                     <a href="">Ofertă educațională</a>
@@ -35,172 +73,572 @@
                     <a href="">Biblioteca școlii</a>
                 </div>
             </div> -->
-        <div onclick="secondaryMenu()" class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed">
-            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </div>
+      <div
+        onclick="secondaryMenu()"
+        class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="white"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
     </nav>
-    <div id="secondaryMenu" class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300">
-        <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
-            <a href="./index.html">Acasă</a>
-            <a href="./istoric.html">Istoric</a>
-            <a href="./catedre.html">Catedre</a>
-            <a href="./informatii.html">Informații</a>
-            <div class="ml-4 text-lg flex flex-col">
-                <a href="./template.html">Anunțuri</a>
-                <a href="">Ofertă educațională</a>
-                <a href="">Consiliul elevilor</a>
-                <a href="">Concursuri și olimpiade</a>
-                <a href="">Burse școlare</a>
-                <a href="">Examene</a> 
-                <a href="">Administrativ</a>
-                <a href="">Biblioteca școlii</a>
-            </div>
-            <a href="./proiecte.html">Proiecte</a>
-            <a href="./contact.html">Contact</a>
+    <div
+      id="secondaryMenu"
+      class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300"
+    >
+      <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
+        <a href="./index.html">Acasă</a>
+        <a href="./istoric.html">Istoric</a>
+        <a href="./catedre.html">Catedre</a>
+        <a href="./informatii.html">Informații</a>
+        <div class="ml-4 text-lg flex flex-col">
+          <a href="./template.html">Anunțuri</a>
+          <a href="">Ofertă educațională</a>
+          <a href="">Consiliul elevilor</a>
+          <a href="">Concursuri și olimpiade</a>
+          <a href="">Burse școlare</a>
+          <a href="">Examene</a>
+          <a href="">Administrativ</a>
+          <a href="">Biblioteca școlii</a>
         </div>
+        <a href="./proiecte.html">Proiecte</a>
+        <a href="./contact.html">Contact</a>
+      </div>
     </div>
-    <div class="pt-20">
-        <!-- <div class="relative flex flex-col w-[100vw] h-[20vw] bg-cover bg-no-repeat bg-center" style="background-image:url(./assets/Interreg-IPA-RO-RS-logo-vers.-2-ENG-t.png);"></div> -->
-        <div class="w-[100vw] bg-[#F4F4F9] text-base pl-8 pr-16 -z-5 pb-3">
-            <h1 class="font-noto text-3xl font-semibold text-[#123]">Clubul de dezbateri academice Zenith Debate</h1> 
-            <div class="py-3">
-                <h4 class="font-noto text-lg font-semibold text-[#762424] pb-2">Cine suntem?</h4>
-                <p class="indent-8">Zenith Debate Club este unul dintre cele mai prestigioase cluburi de dezbateri din Timișoara și România.</p>
-                <p class="indent-8">Reprezentând Colegiul Național Bănățean, doar în ultimul an a acumulat multiple realizări la nivel național: competiții câștigate, debateri premiați individual și calificarea unora în lotul național de dezbateri.</p>
-                <p class="indent-8">Cu toate acestea, clubul de dezbateri reprezintă un mediu prielnic pentru dezvoltarea multilaterală a elevilor de liceu.</p>
-            </div>
-            <div class="py-3">
-                <h4 class="font-noto text-lg font-semibold text-[#762424] pb-2">Când vă puteți alătura și voi clubului?</h4>
-                <p class="indent-8">În toamnă. La începutul anului școlar ne vom începe perioada de recrutare. Mai multe informații despre recrutări vor fi publicate pe conturile noastre de <a class="text-[#123]" href="https://www.instagram.com/zenith.debate/" target="_blank">Instagram</a> și <a class="text-[#123]" href="https://www.facebook.com/ZenithDebate" target="_blank">Facebook</a>.</p>
-            </div>
-        </div>
+    <h1
+      class="font-noto w-[100vw] font-semibold text-[#123] flex justify-center text-4xl pt-24"
+    >
+      Clubul de dezbateri academice Zenith Debate
+    </h1>
+    <div class="w-[100vw] flex flex-col items-center justify-center">
+      <div class="md:w-[80vw] w-[90vw] min-h-[20vh] my-10">
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Cine suntem?
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Zenith Debate Club este unul dintre cele mai prestigioase cluburi de
+          dezbateri din Timișoara și România. Reprezentând Colegiul Național
+          Bănățean, doar în ultimul an a acumulat multiple realizări la nivel
+          național: competiții câștigate, debateri premiați individual și
+          calificarea unora în lotul național de dezbateri. Cu toate acestea,
+          clubul de dezbateri reprezintă un mediu prielnic pentru dezvoltarea
+          multilaterală a elevilor de liceu.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Când vă puteți alătura și voi clubului?
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          În toamnă. La începutul anului școlar ne vom începe perioada de
+          recrutare. Mai multe informații despre recrutări vor fi publicate pe
+          conturile noastre de
+          <a
+            class="text-[#123]"
+            href="https://www.instagram.com/zenith.debate/"
+            target="_blank"
+            >Instagram</a
+          >
+          și
+          <a
+            class="text-[#123]"
+            href="https://www.facebook.com/ZenithDebate"
+            target="_blank"
+            >Facebook</a
+          >.
+        </p>
+      </div>
+      <div class="flex gap-4 mb-10">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          width="32"
+          height="32"
+          viewBox="0 0 256 256"
+          xml:space="preserve"
+        >
+          <defs></defs>
+          <g
+            style="
+              stroke: none;
+              stroke-width: 0;
+              stroke-dasharray: none;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: none;
+              fill-rule: nonzero;
+              opacity: 1;
+            "
+            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+          >
+            <path
+              d="M 45 8.109 c 12.015 0 13.439 0.046 18.184 0.262 c 4.387 0.2 6.77 0.933 8.356 1.549 c 1.955 0.721 3.723 1.872 5.174 3.366 c 1.495 1.452 2.645 3.22 3.366 5.174 c 0.616 1.586 1.349 3.968 1.549 8.356 c 0.216 4.745 0.262 6.168 0.262 18.184 s -0.046 13.439 -0.262 18.184 c -0.2 4.387 -0.933 6.77 -1.549 8.356 c -1.514 3.924 -4.616 7.026 -8.54 8.54 c -1.586 0.616 -3.968 1.349 -8.356 1.549 C 58.44 81.847 57.016 81.893 45 81.893 S 31.56 81.847 26.816 81.63 c -4.387 -0.2 -6.77 -0.933 -8.356 -1.549 c -1.955 -0.721 -3.723 -1.872 -5.174 -3.366 c -1.495 -1.452 -2.645 -3.22 -3.366 -5.174 c -0.616 -1.586 -1.349 -3.968 -1.549 -8.356 c -0.216 -4.745 -0.262 -6.168 -0.262 -18.184 S 8.154 31.562 8.37 26.816 c 0.2 -4.387 0.933 -6.77 1.549 -8.356 c 0.721 -1.955 1.872 -3.723 3.367 -5.174 c 1.452 -1.495 3.22 -2.645 5.174 -3.366 c 1.586 -0.616 3.968 -1.349 8.356 -1.549 C 31.561 8.154 32.984 8.108 45 8.109 M 45 0 C 32.779 0 31.246 0.052 26.447 0.271 c -4.79 0.219 -8.061 0.979 -10.923 2.092 c -3.003 1.13 -5.723 2.901 -7.97 5.19 c -2.29 2.248 -4.061 4.968 -5.192 7.97 c -1.112 2.862 -1.872 6.133 -2.09 10.923 C 0.052 31.246 0 32.779 0 45 s 0.052 13.754 0.272 18.553 c 0.219 4.79 0.979 8.061 2.092 10.923 c 1.13 3.003 2.901 5.723 5.19 7.97 c 2.248 2.289 4.968 4.06 7.97 5.19 c 2.862 1.112 6.133 1.873 10.923 2.092 C 31.247 89.948 32.779 90 45 90 s 13.754 -0.052 18.553 -0.271 c 4.79 -0.219 8.061 -0.979 10.923 -2.092 c 6.044 -2.338 10.823 -7.116 13.161 -13.161 c 1.112 -2.862 1.873 -6.133 2.092 -10.923 C 89.948 58.754 90 57.221 90 45 s -0.052 -13.754 -0.271 -18.553 c -0.219 -4.79 -0.979 -8.061 -2.092 -10.923 c -1.13 -3.003 -2.901 -5.723 -5.19 -7.97 c -2.248 -2.29 -4.968 -4.061 -7.971 -5.191 c -2.862 -1.112 -6.133 -1.872 -10.923 -2.09 C 58.754 0.052 57.221 0 45 0 L 45 0 L 45 0 z"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(0, 0, 0);
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform=" matrix(1 0 0 1 0 0) "
+              stroke-linecap="round"
+            />
+            <path
+              d="M 45 21.892 c -12.762 0 -23.108 10.346 -23.108 23.108 S 32.238 68.108 45 68.108 S 68.108 57.762 68.108 45 l 0 0 C 68.108 32.238 57.762 21.892 45 21.892 z M 45 60 c -8.284 0 -15 -6.716 -15 -15 s 6.716 -15 15 -15 c 8.284 0 15 6.716 15 15 C 60 53.284 53.284 60 45 60 z"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(0, 0, 0);
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform=" matrix(1 0 0 1 0 0) "
+              stroke-linecap="round"
+            />
+            <circle
+              cx="69.02"
+              cy="20.98"
+              r="5.4"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(0, 0, 0);
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform="  matrix(1 0 0 1 0 0) "
+            />
+          </g>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          width="32"
+          height="32"
+          viewBox="0 0 256 256"
+          xml:space="preserve"
+        >
+          <defs></defs>
+          <g
+            style="
+              stroke: none;
+              stroke-width: 0;
+              stroke-dasharray: none;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: none;
+              fill-rule: nonzero;
+              opacity: 1;
+            "
+            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+          >
+            <path
+              d="M 45 -0.228 c -24.853 0 -45 20.25 -45 45.229 c 0 22.806 16.797 41.66 38.633 44.77 V 58.779 h -10.64 V 46.328 h 10.64 v -9.182 c 0 -10.656 6.441 -16.458 15.849 -16.458 c 4.506 0 8.38 0.339 9.508 0.491 v 11.136 l -6.525 0.003 c -5.116 0 -6.107 2.457 -6.107 6.061 v 7.949 h 12.202 l -1.589 12.451 H 51.359 v 30.993 C 73.199 86.666 90 67.81 90 45.001 C 90 20.022 69.853 -0.228 45 -0.228 z"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(0, 0, 0);
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform=" matrix(1 0 0 1 0 0) "
+              stroke-linecap="round"
+            />
+          </g>
+        </svg>
+      </div>
     </div>
-    <div class="relative pb-32 flex justify-center items-center bg-[#f4f8fb]">
-        <div class="justify-center galery gap-6">
-            <div id="bgimage1" onclick="openImagePhone(1)" onmouseleave="lightup(1)" onmouseover="darken(1)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith1.jpg); overflow: hidden;">
-                <div id="container1" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(1)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage2" onclick="openImagePhone(2)" onmouseleave="lightup(2)" onmouseover="darken(2)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith2.jpg); overflow: hidden;">
-                <div id="container2" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(2)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage3" onclick="openImagePhone(3)" onmouseleave="lightup(3)" onmouseover="darken(3)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 col-span-2 row-span-2" style="background-image: url(./assets/Zenith/zenith3.jpg); overflow: hidden;">
-                <div id="container3" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(3)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage4" onclick="openImagePhone(4)" onmouseleave="lightup(4)" onmouseover="darken(4)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 row-span-2" style="background-image: url(./assets/Zenith/zenith5.jpg); overflow: hidden;">
-                <div id="container4" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(4)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage5" onclick="openImagePhone(5)" onmouseleave="lightup(5)" onmouseover="darken(5)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith4.jpg); overflow: hidden;">
-                <div id="container5" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(5)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage6" onclick="openImagePhone(6)" onmouseleave="lightup(6)" onmouseover="darken(6)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith6.jpg); overflow: hidden;">
-                <div id="container6" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(6)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>            
-            <div id="bgimage7" onclick="openImagePhone(7)" onmouseleave="lightup(7)" onmouseover="darken(7)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith7.jpg); overflow: hidden;">
-                <div id="container7" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(7)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
-            <div id="bgimage8" onclick="openImagePhone(8)" onmouseleave="lightup(8)" onmouseover="darken(8)" class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500" style="background-image: url(./assets/Zenith/zenith8.jpg); overflow: hidden;">
-                <div id="container8" class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500">
-                    <button onclick="openImage(8)">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-24 h-24 duration-500">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button> 
-                </div>
-            </div>
+
+    <div class="relative pb-32 flex justify-center items-center">
+      <div class="justify-center galery gap-6">
+        <div
+          id="bgimage1"
+          onclick="openImagePhone(1)"
+          onmouseleave="lightup(1)"
+          onmouseover="darken(1)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith1.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container1"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(1)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+        <div
+          id="bgimage2"
+          onclick="openImagePhone(2)"
+          onmouseleave="lightup(2)"
+          onmouseover="darken(2)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith2.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container2"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(2)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage3"
+          onclick="openImagePhone(3)"
+          onmouseleave="lightup(3)"
+          onmouseover="darken(3)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 col-span-2 row-span-2"
+          style="
+            background-image: url(./assets/Zenith/zenith3.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container3"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(3)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage4"
+          onclick="openImagePhone(4)"
+          onmouseleave="lightup(4)"
+          onmouseover="darken(4)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500 row-span-2"
+          style="
+            background-image: url(./assets/Zenith/zenith5.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container4"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(4)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage5"
+          onclick="openImagePhone(5)"
+          onmouseleave="lightup(5)"
+          onmouseover="darken(5)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith4.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container5"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(5)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage6"
+          onclick="openImagePhone(6)"
+          onmouseleave="lightup(6)"
+          onmouseover="darken(6)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith6.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container6"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(6)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage7"
+          onclick="openImagePhone(7)"
+          onmouseleave="lightup(7)"
+          onmouseover="darken(7)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith7.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container7"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(7)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          id="bgimage8"
+          onclick="openImagePhone(8)"
+          onmouseleave="lightup(8)"
+          onmouseover="darken(8)"
+          class="bg-no-repeat bg-cover bg-center rounded-3xl duration-500"
+          style="
+            background-image: url(./assets/Zenith/zenith8.jpg);
+            overflow: hidden;
+          "
+        >
+          <div
+            id="container8"
+            class="w-full h-full bg-slate-300 opacity-50 translate-y-[100%] flex justify-center items-center duration-500"
+          >
+            <button onclick="openImage(8)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                class="w-24 h-24 duration-500"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="openImage" class="z-10 w-[100vw] h-[calc(100vh-4rem)] top-16 translate-x-[100vw] flex justify-center items-center fixed bg-opacity-70 bg-black duration-500">
-        <button onclick="closeImage()" class="z-30 absolute top-0 left-2 h-12 w-12">
-            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg> 
-        </button>
-        <div class="relative w-full h-[60vh] flex justify-center items-center">
-            <img id="openedImage" src="" alt="" class="z-[100] object-contain md:max-w-[80vw] md:max-h-[80vh] max-w-[90vw] max-h-[80vh]">
-        </div>
+    <div
+      id="openImage"
+      class="z-10 w-[100vw] h-[calc(100vh-4rem)] top-16 translate-x-[100vw] flex justify-center items-center fixed bg-opacity-70 bg-black duration-500"
+    >
+      <button
+        onclick="closeImage()"
+        class="z-30 absolute top-0 left-2 h-12 w-12"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <div class="relative w-full h-[60vh] flex justify-center items-center">
+        <img
+          id="openedImage"
+          src=""
+          alt=""
+          class="z-[100] object-contain md:max-w-[80vw] md:max-h-[80vh] max-w-[90vw] max-h-[80vh]"
+        />
+      </div>
     </div>
-    <footer class="bg-[#123] font-roboto text-base text-[#999999] ">
-        <div class="flex md:flex-row flex-col pt-4 md:justify-between mx-10">
-            <div class="md:w-[50vw] flex flex-col items-center">
-                <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3">Contact</p>
-                    <p>0256491714</p>
-                    <p>0256491713</p>
-                    <p>cnb@colegiulbanatean.ro</p>
-                    <p>Facebook: <a href="https://www.facebook.com/colegiulbanatean">Colegiul Național Bănățean Timișoara</a></p>
-                    <p>Instagram: <a href="https://www.instagram.com/cse_cnb">@cse_cnb</a></p>
-                </div>
-            </div>
-            <div class="md:w-[50vw] flex flex-col items-center">
-                <div class="flex flex-col">
-                    <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">Linkuri utile</p>
-                    <a href="https://www.edu.ro" target="_blank">Ministerul Educației Naționale</a>
-                    <a href="https://www.isj.tm.edu.ro" target="_blank">Inspectoratul Școlar Județean Timiș</a>
-                    <a href="https://www.cjraetm.ro" target="_blank">Centrul Județean de Resurse și Asistență Educațională Timiș</a>
-                    <a href="https://www.rocnee.eu" target="_blank">Centrul Național de Evaluare și Examinare</a>
-                    <a href="https://aracip.eu/" target="_blank">A.R.A.C.I.P</a>
-                    <a href="https://cjextm.ro/" target="_blank">Centrul Județean de Excelență</a>
-                    <a href="https://www.ccd-timis.ro/" target="_blank">Casa Corpului Didactic</a>
-                    <a href="https://palatulcopiilortm.wordpress.com" target="_blank">Palatul Copiilor Timișoara</a>
-                </div>
-            </div>
+    <footer class="bg-[#123] font-roboto text-base text-[#999999]">
+      <div class="flex md:flex-row flex-col pt-4 md:justify-between mx-10">
+        <div class="md:w-[50vw] flex flex-col items-center">
+          <div class="flex flex-col">
+            <p class="font-noto text-lg font-semibold mb-3">Contact</p>
+            <p>0256491714</p>
+            <p>0256491713</p>
+            <p>cnb@colegiulbanatean.ro</p>
+            <p>
+              Facebook:
+              <a href="https://www.facebook.com/colegiulbanatean"
+                >Colegiul Național Bănățean Timișoara</a
+              >
+            </p>
+            <p>
+              Instagram:
+              <a href="https://www.instagram.com/cse_cnb">@cse_cnb</a>
+            </p>
+          </div>
         </div>
-        <div class="w-[100vw] mt-6 flex flex-col justify-center items-center">
-            <p>&copy;2023 Colegiul Național Bănățean</p>
-            <div class="flex items-center mt-6 flex-col gap-0">
-                <div>Proiect realizat de: </div>
-                <div>Daria-Cristina DAVID (frontend)</div>
-                <div>Irina-Ioana FLOREA (frontend) </div>
-                <div>Alexandru-Ionuț MIHOC (fotograf) </div>
-                <div>Dragoș-Gabriel MÂȚU (coordonator frontend) </div>
-                <div>Robert-Constantin UIBAR (coordonator proiect / backend)</div>
-            </div>
+        <div class="md:w-[50vw] flex flex-col items-center">
+          <div class="flex flex-col">
+            <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">
+              Linkuri utile
+            </p>
+            <a href="https://www.edu.ro" target="_blank"
+              >Ministerul Educației Naționale</a
+            >
+            <a href="https://www.isj.tm.edu.ro" target="_blank"
+              >Inspectoratul Școlar Județean Timiș</a
+            >
+            <a href="https://www.cjraetm.ro" target="_blank"
+              >Centrul Județean de Resurse și Asistență Educațională Timiș</a
+            >
+            <a href="https://www.rocnee.eu" target="_blank"
+              >Centrul Național de Evaluare și Examinare</a
+            >
+            <a href="https://aracip.eu/" target="_blank">A.R.A.C.I.P</a>
+            <a href="https://cjextm.ro/" target="_blank"
+              >Centrul Județean de Excelență</a
+            >
+            <a href="https://www.ccd-timis.ro/" target="_blank"
+              >Casa Corpului Didactic</a
+            >
+            <a href="https://palatulcopiilortm.wordpress.com" target="_blank"
+              >Palatul Copiilor Timișoara</a
+            >
+          </div>
         </div>
+      </div>
+      <div class="w-[100vw] mt-6 flex flex-col justify-center items-center">
+        <p>&copy;2023 Colegiul Național Bănățean</p>
+        <div class="flex items-center mt-6 flex-col gap-0">
+          <div>Proiect realizat de:</div>
+          <div>Daria-Cristina DAVID (frontend)</div>
+          <div>Irina-Ioana FLOREA (frontend)</div>
+          <div>Alexandru-Ionuț MIHOC (fotograf)</div>
+          <div>Dragoș-Gabriel MÂȚU (coordonator frontend)</div>
+          <div>Robert-Constantin UIBAR (coordonator proiect / backend)</div>
+        </div>
+      </div>
     </footer>
-</body>
-<script src='./main.js'></script>
+  </body>
+  <script src="./main.js"></script>
 </html>

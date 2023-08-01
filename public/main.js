@@ -16,9 +16,11 @@ if (window.location.pathname=='/index.html' || window.location.pathname=='/' || 
     let singleSlideWidth = document.querySelector("#container").clientWidth;
     document.querySelector("#slideShow").style.width = numberOfSlides * singleSlideWidth + "px"
 
+    if(numberOfSlides > 1){
     setInterval(() => {
         autoSlideShow();
       }, "5000");
+    }
 
     if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html'){
         document.querySelector("#vid").volume = 0.2;
@@ -118,6 +120,8 @@ function Search(){
 }
 
 function slideShow(value){
+    let Slider = document.querySelector("#slideShow");
+    Slider.style.transitionDuration = "500ms";
     let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
     document.querySelector("#slideShow").style.transform = "translateX("+ (value - 1) * -singleSlideWidth +"px)";
 
