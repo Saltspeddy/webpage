@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/CNB_sgV2-removebg-preview.png"
+    />
+    <title>Consiliul administrativ și educativ</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/public/assets/CNB_sgV2-removebg-preview.png"
+    />
+  </head>   
+  <body class="h-[100vh] font-roboto bg-[#F4F4F9]" style="overflow-x: hidden">
+    <nav
+      class="z-50 h-16 min-w-[100vw] bg-[#762424] flex justify-between items-center gap-4 fixed"
+    >
+      <img
+        class="h-14 md:ml-16 ml-10 fixed"
+        src="./assets/CNB_sgV2-removebg-preview.png"
+        alt="CNB logo"
+      />
+      <div class="z-40 md:ml-28 ml-24 flex flex-col fixed text-white text-sm">
+        <p>Colegiul</p>
+        <p>Național</p>
+        <p>Bănățean</p>
+      </div>
+      <div
+        class="h-16 w-[100vw] hidden xl:flex flex-row self-center items-center justify-center text-lg gap-10 fixed"
+      >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./index.html"
+          >Acasă</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./istoric.html"
+          >Istoric
+        </a>
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./catedre.html"
+          >Catedre</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./informatii.html"
+          >Informații</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./proiecte.html"
+          >Proiecte</a
+        >
+        <a
+          class="text-white px-6 h-[100%] flex items-center border-b-2 border-transparent hover:border-white duration-500"
+          href="./contact.html"
+          >Contact</a
+        >
+      </div>
+      <div
+        onclick="secondaryMenu()"
+        class="z-50 flex xl:hidden ml-[calc(100vw-5rem)] mr-7 fixed"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="white"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </nav>
+    <div
+      id="secondaryMenu"
+      class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300"
+    >
+      <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
+        <a href="./index.html">Acasă</a>
+        <a href="./istoric.html">Istoric</a>
+        <a href="./catedre.html">Catedre</a>
+        <a href="./informatii.html">Informații</a>
+        <div class="ml-4 text-lg flex flex-col">
+          <a href="./anunturi.html">Anunțuri</a>
+          <a href="">Management</a>
+          <a href="">Personal administrativ</a>
+          <a href="">Ofertă educațională</a>
+          <a href="">Transferuri</a>
+          <a href="">Înscrieri</a>
+          <a href="">Consiliul elevilor</a>
+          <a href="">Concursuri și olimpiade</a>
+          <a href="">Burse școlare</a>
+          <a href="">Examene</a>
+          <a href="">Biblioteca școlii</a>
+        </div>
+        <a href="./proiecte.html">Proiecte</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="py-24 w-full md:px-20 min-h-screen grid gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4" >
+      <div class="flex h-full gap-4 flex-col w-full">
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://plus.unsplash.com/premium_photo-1670986949534-e73bbdbdbd05?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4OHx8fGVufDB8fHx8fA%3D%3D';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm">12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+
+          </div>
+        </div>
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1731412466165-f5b0d05ee5f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm"> 12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+
+          </div>
+        </div>
+        
+      </div>
+      <div class="flex h-full gap-4 flex-col w-full">
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1733169312713-fd0c6963487a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D';
+             alt="no image"
+          ></img> 
+          <div class="bg-white h-40 w-full"></div>
+        </div>
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1734268486202-7e85b12a7fa2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDJ8fHxlbnwwfHx8fHw%3D';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm">12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+            <center>
+              <button class="p-2 text-white bg-[#762424] hover:bg-[#773e3e] w-[60%] rounded-xl duration-500">Go to source</button>
+            </center> 
+          </div>
+        </div>
+      </div>
+      <div class="flex h-full gap-4 flex-col w-full">
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1685720818009-ac850473f60f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm"> 12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+            <center>
+              <button class="p-2 text-white bg-[#762424] hover:bg-[#773e3e] w-[60%] rounded-xl duration-500">Go to source</button>
+            </center> 
+          </div>
+        </div>
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1721332155433-3a4b5446bcd9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm"> 12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="flex h-full gap-4 flex-col w-full">
+        <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+          <img
+            class=""
+             src= 'https://images.unsplash.com/photo-1730829807477-783c91627941?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8';
+             alt="no image"
+          ></img>
+          <div class="relative bg-white p-2  w-full">
+            <h2 class="absolute top-2 left-6 tracking-wide text-sm"> 12/31/24</h2>
+            <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+            <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+            <center>
+              <button class="p-2 text-white bg-[#762424] hover:bg-[#773e3e] w-[60%] rounded-xl duration-500">Go to source</button>
+            </center> 
+          </div>
+        </div>
+          <div class=" h-fit w-full rounded-lg overflow-hidden shadow-xl">
+            <img
+              class=""
+               src= 'https://images.unsplash.com/photo-1733837323673-da9b3a98135e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5M3x8fGVufDB8fHx8fA%3D%3D';
+               alt="no image"
+            ></img>
+            <div class="relative bg-white p-2  w-full">
+              <h2 class="absolute top-2 left-6 tracking-wide text-sm"> 12/31/24</h2>
+              <h2 class="absolute top-2 right-6 text-sm"> Nume si prenume creator postare</h2>
+              <p class="indent-8 my-8">Informații despre postare și sau alte date importante despre evenimente, ore, excursii, șamd</p>
+  
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="bg-[#123] font-roboto text-base text-[#999999]">
+      <div class="flex md:flex-row flex-col pt-4 md:justify-between mx-10">
+        <div class="md:w-[50vw] flex flex-col items-center">
+          <div class="flex flex-col">
+            <p class="font-noto text-lg font-semibold mb-3">Contact</p>
+            <p>0256491714</p>
+            <p>0256491713</p>
+            <p>cnb@colegiulbanatean.ro</p>
+            <p>
+              Facebook:
+              <a href="https://www.facebook.com/colegiulbanatean"
+                >Colegiul Național Bănățean Timișoara</a
+              >
+            </p>
+            <p>
+              Instagram:
+              <a href="https://www.instagram.com/cse_cnb">@cse_cnb</a>
+            </p>
+          </div>
+        </div>
+        <div class="md:w-[50vw] flex flex-col items-center">
+          <div class="flex flex-col">
+            <p class="font-noto text-lg font-semibold mb-3 md:mt-0 mt-4">
+              Linkuri utile
+            </p>
+            <a href="https://www.edu.ro" target="_blank"
+              >Ministerul Educației Naționale</a
+            >
+            <a href="https://www.isj.tm.edu.ro" target="_blank"
+              >Inspectoratul Școlar Județean Timiș</a
+            >
+            <a href="https://www.cjraetm.ro" target="_blank"
+              >Centrul Județean de Resurse și Asistență Educațională Timiș</a
+            >
+            <a href="https://www.rocnee.eu" target="_blank"
+              >Centrul Național de Evaluare și Examinare</a
+            >
+            <a href="https://aracip.eu/" target="_blank">A.R.A.C.I.P</a>
+            <a href="https://cjextm.ro/" target="_blank"
+              >Centrul Județean de Excelență</a
+            >
+            <a href="https://www.ccd-timis.ro/" target="_blank"
+              >Casa Corpului Didactic
+            </a>
+            <a href="https://palatulcopiilortm.wordpress.com" target="_blank"
+              >Palatul Copiilor Timișoara</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="w-[100vw] mt-6 flex flex-col justify-center items-center">
+        <p>&copy;2023 Colegiul Național Bănățean</p>
+        <div class="flex items-center mt-6 flex-col gap-0">
+          <div>Proiect realizat de:</div>
+          <div>Daria-Cristina DAVID (frontend)</div>
+          <div>Irina-Ioana FLOREA (frontend)</div>
+          <div>Alexandru-Ionuț MIHOC (fotograf)</div>
+          <div>Dragoș-Gabriel MÂȚU (coordonator frontend)</div>
+          <div>Robert-Constantin UIBAR (coordonator proiect / backend)</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -84,21 +84,14 @@
       id="secondaryMenu"
       class="z-40 fixed right-0 translate-x-[250px] top-0 h-[100vh] w-[250px] bg-[#762424] duration-300"
     >
-      <div class="z-50 flex gap-3 flex-col p-6 mt-10 text-white text-xl">
+      <div
+        class="z-50 flex items-center gap-6 flex-col p-6 mt-10 text-white text-4xl"
+      >
         <a href="./index.html">Acasă</a>
         <a href="./istoric.html">Istoric</a>
         <a href="./catedre.html">Catedre</a>
         <a href="./informatii.html">Informații</a>
-        <div class="ml-4 text-lg flex flex-col">
-          <a href="./template.html">Anunțuri</a>
-          <a href="">Ofertă educațională</a>
-          <a href="">Consiliul elevilor</a>
-          <a href="">Concursuri și olimpiade</a>
-          <a href="">Burse școlare</a>
-          <a href="">Examene</a>
-          <a href="">Administrativ</a>
-          <a href="">Biblioteca școlii</a>
-        </div>
+
         <a href="./proiecte.html">Proiecte</a>
         <a href="./contact.html">Contact</a>
       </div>
@@ -136,161 +129,177 @@
           ></div>
           <div
             class="md:w-[50vw] w-[90vw] flex items-end bg-center bg-no-repeat bg-cover"
-            style="background-image: url(./assets/scan0004.jpg)"
-          ></div>
-          <div
-            class="md:w-[50vw] w-[90vw] flex items-end bg-center bg-no-repeat bg-cover"
-            style="background-image: url(./assets/scan0006.jpg)"
-          ></div>
-
-          <div
-            class="md:w-[50vw] w-[90vw] flex items-end bg-center bg-no-repeat bg-cover"
             style="background-image: url(./assets/scan0003.jpg)"
           ></div>
         </div>
       </div>
-
       <div
-        class="relative w-[50vw] h-10 bg-transparent flex items-center justify-center text-black"
+        class="relative w-[50vw] h-10 bg-transparent flex items-center justify-center"
       >
         <div
           id="slideShowButtons"
           class="absolute flex justify-center items-center gap-3"
         ></div>
+        <div
+          id="arrowButtons"
+          class="absolute flex justify-center items-center gap-3"
+        >
+          <button onclick="arrowLeftSlide()">
+            <svg
+              id="leftArrow"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 duration-500"
+              style="color: gray"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+              />
+            </svg>
+          </button>
+          <button onclick="arrowRightSlide()">
+            <svg
+              id="rightArrow"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 duration-500"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="text-base pt-2">
-      <h1
-        class="font-noto w-[100vw] font-semibold text-[#123] flex justify-center text-4xl pt-2"
-      >
-        File de istorie
-      </h1>
+    <h1
+      class="font-noto w-[100vw] font-semibold text-[#123] flex justify-center text-4xl pt-4"
+    >
+      File de istorie
+    </h1>
 
-      <div
-        class="w-[100vw] min-h-[70vh] flex flex-col justify-center items-center my-10"
-      >
-        <div class="md:w-[80vw] w-[90vw]">
-          <h4
-            class="font-noto w-[90vw] flex font-semibold text-[#762424] text-2xl mb-3"
-          >
-            Clădirea Colegiului Național Bănățean din Timişoara a adăpostit
-            instituții de învățământ încă de la înființare.
-          </h4>
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Între 1773-1880
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Aici a funcţionat Şcoala Elementară „Trivium” de pe lângă parohia
-            din cartierul Iosefin.
-          </p>
+    <div
+      class="w-[100vw] min-h-[70vh] flex flex-col justify-center items-center my-10"
+    >
+      <div class="md:w-[80vw] w-[90vw]">
+        <h4
+          class="font-noto w-[90vw] flex font-semibold text-[#762424] text-2xl mb-3"
+        >
+          Clădirea Colegiului Național Bănățean din Timişoara a adăpostit
+          instituții de învățământ încă de la înființare.
+        </h4>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Între 1773-1880
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Aici a funcţionat Şcoala Elementară „Trivium” de pe lângă parohia din
+          cartierul Iosefin.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Între 1881-1890
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          În paralel cu Şcoala Elementară a funcţionat şi Şcoala Surorilor
+          „Notre Dame“.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Între 1890-1924
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Este abandonată vechea şcoală elementară, iar noua şcoală catolică îşi
+          extinde perimetrul, adăugându-se aripa dinspre bulevardul Dragalina.
+          Se spune că însuşi împăratul Franz Joseph a plantat arţarul care se
+          găseşte şi astăzi în curtea principală.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1924</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Școala Surorilor „Notre Dame“ îşi lărgeşte sfera de activitate,
+          înfiinţând Şcoala de Menaj „Regina Maria“.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1931</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Odată cu înfiinţarea cursului liceal, instituţia devine Liceul
+          Romano-Catolic de Fete „Notre Dame“.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1946</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Şcoala de Menaj „Regina Maria“ îşi schimbă denumirea în Şcoala Urbană
+          de Gospodărie.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Ulterior, în 1947,
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Își schimbă din nou denumirea în Şcoala Tehnică de Gospodărie
+          Timişoara.
+        </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1948</h1>
+        <p class="indent-8 mt-4 md:text-xl text-lg">
+          Liceul Romano - Catolic de Fete „Notre Dame“ devine Şcoala Normală de
+          Fete Timişoara.
+        </p>
+        <p class="indent-8 md:text-xl text-lg">
+          A fost mutată aici, de la Liceul „C. D. Loga“ Timişoara, secţia cu
+          predare în limba sârbă.
+        </p>
+        <p class="indent-8 mb-4 md:text-xl text-lg">
+          Odată cu reforma învăţământului, Şcoala Tehnică de Gospodărie devine
+          Şcoala Pedagogică de Educatoare, iar Liceul Romano - Catolic de Fete
+          „Notre Dame“ devine Şcoala Pedagogică de Fete.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Între 1881-1890
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            În paralel cu Şcoala Elementară a funcţionat şi Şcoala Surorilor
-            „Notre Dame“.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1956</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Noua denumire a instituţiilor adăpostite în complex este Şcoala Medie
+          Nr. 7 Timişoara.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Între 1890-1924
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Este abandonată vechea şcoală elementară, iar noua şcoală catolică
-            îşi extinde perimetrul, adăugându-se aripa dinspre bulevardul
-            Dragalina. Se spune că însuşi împăratul Franz Joseph a plantat
-            arţarul care se găseşte şi astăzi în curtea principală.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1961</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Se înfiinţează o secţie germană şi o secţie maghiară a Şcolii Medii
+          Nr. 7. Cea dintâi funcţionează şi astăzi, iar cea maghiară s-a
+          desprins o dată cu înfiinţarea Liceului „Béla Bartók“.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1924</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Școala Surorilor „Notre Dame“ îşi lărgeşte sfera de activitate,
-            înfiinţând Şcoala de Menaj „Regina Maria“.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
+          Între 1965 si 1973
+        </h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Instituţia funcţionează sub numele de Şcoala Medie Nr. 10 Timişoara.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1931</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Odată cu înfiinţarea cursului liceal, instituţia devine Liceul
-            Romano-Catolic de Fete „Notre Dame“.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">Din 1973</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Liceul primeşte noua denumire de Liceul Real-Umanist Nr. 1 Timişoara.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1946</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Şcoala de Menaj „Regina Maria“ îşi schimbă denumirea în Şcoala
-            Urbană de Gospodărie.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1977</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Instituţia devine Liceul de Filologie-Istorie Timişoara.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Ulterior, în 1947,
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Își schimbă din nou denumirea în Şcoala Tehnică de Gospodărie
-            Timişoara.
-          </p>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1990</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Se înfiinţează Liceul Sârbesc, iar Liceul de Filologie-Istorie îşi
+          schimbă denumirea în Colegiul Bănăţean Timişoara.
+        </p>
 
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1948</h1>
-          <p class="indent-8 mt-4 md:text-xl text-lg">
-            Liceul Romano - Catolic de Fete „Notre Dame“ devine Şcoala Normală
-            de Fete Timişoara.
-          </p>
-          <p class="indent-8 md:text-xl text-lg">
-            A fost mutată aici, de la Liceul „C. D. Loga“ Timişoara, secţia cu
-            predare în limba sârbă.
-          </p>
-          <p class="indent-8 mb-4 md:text-xl text-lg">
-            Odată cu reforma învăţământului, Şcoala Tehnică de Gospodărie devine
-            Şcoala Pedagogică de Educatoare, iar Liceul Romano - Catolic de Fete
-            „Notre Dame“ devine Şcoala Pedagogică de Fete.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1956</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Noua denumire a instituţiilor adăpostite în complex este Şcoala
-            Medie Nr. 7 Timişoara.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1961</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Se înfiinţează o secţie germană şi o secţie maghiară a Şcolii Medii
-            Nr. 7. Cea dintâi funcţionează şi astăzi, iar cea maghiară s-a
-            desprins o dată cu înfiinţarea Liceului „Béla Bartók“.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Între 1965 si 1973
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Instituţia funcţionează sub numele de Şcoala Medie Nr. 10 Timişoara.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Din 1973
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Liceul primeşte noua denumire de Liceul Real-Umanist Nr. 1
-            Timişoara.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1977</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Instituţia devine Liceul de Filologie-Istorie Timişoara.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">În 1990</h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Se înfiinţează Liceul Sârbesc, iar Liceul de Filologie-Istorie îşi
-            schimbă denumirea în Colegiul Bănăţean Timişoara.
-          </p>
-
-          <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">
-            Din 1999
-          </h1>
-          <p class="indent-8 my-4 md:text-xl text-lg">
-            Instituţia primeşte titulatura de Colegiul Naţional Bănăţean
-            Timişoara, denumire sub care funcţionează şi astăzi.
-          </p>
-        </div>
+        <h1 class="font-noto md:text-3xl text-2xl text-[#762424]">Din 1999</h1>
+        <p class="indent-8 my-4 md:text-xl text-lg">
+          Instituţia primeşte titulatura de Colegiul Naţional Bănăţean
+          Timişoara, denumire sub care funcţionează şi astăzi.
+        </p>
       </div>
     </div>
 

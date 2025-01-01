@@ -6,53 +6,117 @@ let topOffset = window.pageYOffset
 let width = screen.width
 let contor = 1;
 let isDesktop;
+let isButtons = true;
+let numberOfSlides;
+let intervalID;
 window.addEventListener('DOMContentLoaded', function() {});
 ///////////////////////////////////INDEX/////////////////////////////////////////////////
 if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html' || window.location.pathname=='/public/anunturi.html' || window.location.pathname=='/anunturi.html' || window.location.pathname=='/public/istoric.html' || window.location.pathname=='/istoric.html') { // "/public/index.html" trebuie folosit numai pe proiectul local
-    let numberOfSlides = document.querySelector("#slideShow").children.length
+    numberOfSlides = document.querySelector("#slideShow").children.length
+
     for( let i = 1 ; i < numberOfSlides; i++){
-        document.querySelector("#slideShowButtons").innerHTML += " <button onclick=slideShow("+ i +")><svg id='i"+ i +"' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-5 h-5 opacity-50 hover:opacity-70 duration-500'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/></svg></button>"
+        if(window.location.pathname=='/istoric' || window.location.pathname=='/public/istoric.html'){
+            
+        }else{
+            document.querySelector("#slideShowButtons").innerHTML += " <button onclick=slideShow("+ i +")><svg id='i"+ i +"' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-5 h-5 opacity-50 hover:opacity-70 duration-500'><path stroke-linecap='round' stroke-linejoin='round' d='M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z'/></svg></button>"
+        }
     }
     let singleSlideWidth = document.querySelector("#container").clientWidth;
-    document.querySelector("#slideShow").style.width = numberOfSlides * singleSlideWidth + "px"
-
+    document.querySelector("#slideShow").style.width = (numberOfSlides) * singleSlideWidth + "px"
+ 
     if(numberOfSlides > 1){
-    setInterval(() => {
-        autoSlideShow();
-      }, "5000");
+        intervalID = setInterval(() => {
+            autoSlideShow();
+        }, "5000");
     }
-
-    if (window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html'){
+   
+    if(window.location.pathname=='/index.html' || window.location.pathname=='/' || window.location.pathname=='/public/index.html'){
         document.querySelector("#vid").volume = 0.2;
     }
 }
 
-
 if(width > 1260) isDesktop = true;
 else isDesktop =false
 
-function openImagePhone(value){
+function openImagePhone(value, type){
+   
     if(isDesktop == false)
     document.querySelector("#openImage").style.transform = "translateX(0px)";
     let bgImage = document.querySelector("#bgimage"+value).style.backgroundImage.slice(5,-2);
     document.querySelector("#openedImage").src = bgImage;
+    document.querySelector("#downloadImage").href = bgImage;
 }
-function openImage(value){
+function openImage(value, type){
     document.querySelector("#openImage").style.transform = "translateX(0px)";
     let bgImage = document.querySelector("#bgimage"+value).style.backgroundImage.slice(5,-2);
     document.querySelector("#openedImage").src = bgImage;
+    document.querySelector("#downloadImage").href = bgImage;
+
 }
 function closeImage(){  
     document.querySelector("#openImage").style.transform = "translateX(100vw)";
 }
 
-function openVideo(){
-    
-}
-
 function darken(value){
     if(isDesktop == true){
         document.querySelector("#container"+value).style.transform = "translateY(0px)";
+    }
+}
+
+let isAuto = false
+function arrowLeftSlide(){
+    
+    if(isAuto === true){ 
+        contor--;
+    };
+
+   if(contor == 0 && isAuto === true){
+    contor++;
+   }
+   else if(contor > 1 ){
+        contor--;
+        let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
+        let Slider = document.querySelector("#slideShow");
+        Slider.style.transitionDuration = "500ms";
+        Slider.style.transform = "translateX("+ (contor - 1) * -singleSlideWidth +"px)";
+        isAuto = false;
+        clearInterval(intervalID);
+        setTimeout(intervalID = setInterval(() => {
+            autoSlideShow();
+        }, "5000"), 10000)
+    }
+    if(contor === 1){
+        document.querySelector("#leftArrow").style.color = "gray"
+    }
+    else{document.querySelector("#rightArrow").style.color = "black"
+    document.querySelector("#leftArrow").style.color = "black"}
+}
+
+function arrowRightSlide(){
+    if(isAuto === true && contor == 1){
+    }
+    else{
+        if(isAuto === true){ 
+            contor--;
+            isAuto = false;
+        }
+        if(contor < numberOfSlides - 1){
+            contor++;
+            let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
+            let Slider = document.querySelector("#slideShow");
+            Slider.style.transitionDuration = "500ms";
+            Slider.style.transform = "translateX("+ (contor - 1) * -singleSlideWidth +"px)";
+            isAuto = false;
+            clearInterval(intervalID);
+            setTimeout(intervalID = setInterval(() => {
+                autoSlideShow();
+            }, "5000"), 10000)
+        }
+        if(contor === numberOfSlides - 1){
+            document.querySelector("#rightArrow").style.color = "gray"
+        }
+        else{document.querySelector("#rightArrow").style.color = "black"
+        document.querySelector("#leftArrow").style.color = "black"}
     }
 }
 
@@ -62,61 +126,55 @@ function lightup(value){
     document.querySelector("#container"+value).style.transform = "translateY(" + containerHeight + "px)";
     }
 }
-
+let startSlide = false;
 function autoSlideShow(){
+
+    isAuto = true;
     let singleSlideWidth = document.querySelector("#singleSlide").clientWidth;
     let sliderWidth = document.querySelector("#slideShow").clientWidth;
     let Slider = document.querySelector("#slideShow");
     Slider.style.transform = "translateX("+ (contor - 1) * -singleSlideWidth +"px)";
-
+   if(window.location.pathname != "/public/istoric.html")
     for( let i = 1 ; i < document.querySelector("#slideShow").children.length ; i++){
-        if(i != contor){
-            document.querySelector("#i"+i).style.opacity = "0.5";
-            document.querySelector("#i"+i).style.height = "1.25rem";
-            document.querySelector("#i"+i).style.width = "1.25rem";
-        }
-        else{
-            document.querySelector("#i"+i).style.opacity = "0.8";
-            document.querySelector("#i"+i).style.height = "1.5rem";
-            document.querySelector("#i"+i).style.width = "1.5rem";
+        if(isButtons === true){
+            if(i != contor ){
+                document.querySelector("#i"+i).style.opacity = "0.5";
+                document.querySelector("#i"+i).style.height = "1.25rem";
+                document.querySelector("#i"+i).style.width = "1.25rem";
+            }
+            else{
+                document.querySelector("#i"+i).style.opacity = "0.8";
+                document.querySelector("#i"+i).style.height = "1.5rem";
+                document.querySelector("#i"+i).style.width = "1.5rem";
+            }
         }
     }
-    if( contor === document.querySelector("#slideShow").children.length - 1 ){
+    if( contor === numberOfSlides - 1 ){
+        if(window.location.pathname === "/public/istoric.html"){
+            document.querySelector("#leftArrow").style.color = "gray"
+            document.querySelector("#rightArrow").style.color = "gray"}
+        Slider.style.transitionDuration = "500ms";
         setTimeout(function(){
             Slider.style.transform = "translateX(-"+ (sliderWidth - singleSlideWidth) +"px)";
-
         },4500)
         contor = 1;
     }
     else if( contor === 1 ){
+        if(window.location.pathname === "/public/istoric.html"){
+        document.querySelector("#leftArrow").style.color = "gray"
+        document.querySelector("#rightArrow").style.color = "black"
+    }
         Slider.style.transitionDuration = "0s";
         contor++;
     }
-    else if( contor != document.querySelector("#slideShow").children.length - 1 && contor != 1){
+    else if( contor != numberOfSlides - 1 && contor != 1){
+        if(window.location.pathname === "/public/istoric.html"){
+        document.querySelector("#rightArrow").style.color = "black"
+        document.querySelector("#leftArrow").style.color = "black"
+    }
         contor++;
         Slider.style.transitionDuration = "500ms";
     }
-}
-
-// function searchResults( searchText , searchURL ){
-//     this.searchText = searchText;
-//     this.searchURL = searchURL;
-// }
-let searchResults = [
-    {   
-        "textSearch":"olimpici",
-        "url":"http://www.w3schools.com",
-    },
-    {   
-        "textSearch":"Atlas",
-        "url":"https://www.tutorialspoint.com/how-to-stop-refreshing-the-page-on-submit-in-javascript",
-    },
-]
-searchResults.push()
-function Search(){
-    for( let i = 0 ; i < searchResults.length ; i++ )
-        if(document.querySelector("#searchBar").value == searchResults[i].textSearch)
-            window.location.href = searchResults[i].url;
 }
 
 function slideShow(value){
@@ -152,46 +210,6 @@ function scrollNavBar(){
         document.querySelector("#nav").style.backgroundColor = "rgb(118 36 36 / 0.9)"
     }
 }
-
-///////////////////////////////////ISTORIC/////////////////////////////////////////////////
-
-// var images = ["url('./assets/scan0003.jpg')",
-// "url('./assets/scan0003.jpg')",
-// "url('./assets/scan0004.jpg')",
-// "url('./assets/scan0006.jpg')",
-// "url('./assets/scan0003.jpg')",
-// "url('./assets/scan0004.jpg')",
-// "url('./assets/scan0006.jpg')"];
-// var index = 0;
-// var div = document.createElement('div');
-
-// function makeImage() {
-//     if(screen.width>700)
-//         {div.style.width="80vw";
-//         div.style.height="80vh";
-//         div.style.backgroundSize="contain";}
-//     else
-//         {div.style.width="100vw";
-//         div.style.height="60vh";
-//         div.style.backgroundSize="contain";}   
-//    div.style.margin="auto"
-//    div.style.backgroundImage=images[0];
-//    div.style.backgroundPosition="center center";
-//    div.style.backgroundRepeat="no-repeat";
-//    document.getElementById('content').appendChild(div);
-// }
-// if (window.location.pathname=='/istoric.html' || window.location.pathname=='/public/istoric.html') {
-// setInterval(() => {
-//     slideShowIstoric();
-//   }, "3000");
-// }
-// function slideShowIstoric(){
-//     index++;
-//     if(index == 7)
-//         index = 0;
-//     index = index % images.length;
-//     div.style.backgroundImage=images[index];
-// }
 
 function moveRight(){
     var div = document.getElementById('content').getElementsByTagName('div')[2];
@@ -245,7 +263,7 @@ function dropCatedre(value){
 
 ///////////////////////////////////INFORMATII/////////////////////////////////////////////////
 let boolInformatii = [];
-for (let index = 1; index <= 8; index++) {
+for (let index = 1; index <= 9; index++) {
     boolInformatii[index] = true;
 }
 function dropInformatii(value){
@@ -314,7 +332,11 @@ function navmod(){
     }
 }
 
-
+function dropdown(){
+    document.querySelector("#dropdown").style.display = "block";
+    console.log(3);
+    document.querySelector("#searchBar").style.bor = 0;
+}
 ///////////////////////////////////NUME/////////////////////////////////////////////////
 
 let personNames = ["Matu Dragos Gabriel", "Filip Miriam-Valentina"]
